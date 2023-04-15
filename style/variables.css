@@ -1,0 +1,135 @@
+:root {
+  /* SET MAIN COLORS (400) */
+  --color-primary-hsl: hsl(0, 0%, 53%, 1);
+  --color-secondary-hsl: ;
+  --color-accent-hsl: ;
+  --color-neutral-hsl: hsl(0, 0%, 100%, 1);
+  --color-neutral-50a: hsl(0, 0%, 100%, 0.5);
+  --color-dark-hsl: hsl(220, 7%, 9%, 1);
+  --color-dark-700: hsl(210, 8%, 23%);
+  /* Primary color variations */
+  /* --color-primary-100: hsl(var(--color-primary-hsl) 95%);
+  --color-primary-200: hsl(var(--color-primary-hsl) 80%);
+  --color-primary-300: hsl(var(--color-primary-hsl) 60%);
+  --color-primary-400: hsl(var(--color-primary-hsl) 50%);
+  --color-primary-500: hsl(var(--color-primary-hsl) 40%);
+  --color-primary-600: hsl(var(--color-primary-hsl) 30%);
+  --color-primary-700: hsl(var(--color-primary-hsl) 20%);
+  --color-primary-800: hsl(var(--color-primary-hsl) 10%);
+  --color-primary-900: hsl(var(--color-primary-hsl) 5%); */
+  /* Secondary color variations */
+  /* --color-secondary-100: hsl(var(--color-secondary-hsl) 95%);
+  --color-secondary-200: hsl(var(--color-secondary-hsl) 80%);
+  --color-secondary-300: hsl(var(--color-secondary-hsl) 60%);
+  --color-secondary-400: hsl(var(--color-secondary-hsl) 50%);
+  --color-secondary-500: hsl(var(--color-secondary-hsl) 40%);
+  --color-secondary-600: hsl(var(--color-secondary-hsl) 30%);
+  --color-secondary-700: hsl(var(--color-secondary-hsl) 20%);
+  --color-secondary-800: hsl(var(--color-secondary-hsl) 10%);
+  --color-secondary-900: hsl(var(--color-secondary-hsl) 5%); */
+  /* Accent color variations */
+  /* --color-accent-100: hsl(var(--color-accent-hsl) 95%);
+  --color-accent-200: hsl(var(--color-accent-hsl) 80%);
+  --color-accent-300: hsl(var(--color-accent-hsl) 60%);
+  --color-accent-400: hsl(var(--color-accent-hsl) 50%);
+  --color-accent-500: hsl(var(--color-accent-hsl) 40%);
+  --color-accent-600: hsl(var(--color-accent-hsl) 30%);
+  --color-accent-700: hsl(var(--color-accent-hsl) 20%);
+  --color-accent-800: hsl(var(--color-accent-hsl) 10%);
+  --color-accent-900: hsl(var(--color-accent-hsl) 5%); */
+  /* Neutral color variations */
+  /* --color-neutral-100: hsl(var(--color-neutral-hsl) 95%);
+  --color-neutral-200: hsl(var(--color-neutral-hsl) 80%);
+  --color-neutral-300: hsl(var(--color-neutral-hsl) 60%);
+  --color-neutral-400: hsl(var(--color-neutral-hsl) 50%);
+  --color-neutral-500: hsl(var(--color-neutral-hsl) 40%);
+  --color-neutral-600: hsl(var(--color-neutral-hsl) 30%);
+  --color-neutral-700: hsl(var(--color-neutral-hsl) 20%);
+  --color-neutral-800: hsl(var(--color-neutral-hsl) 10%);
+  --color-neutral-900: hsl(var(--color-neutral-hsl) 5%); */
+  /* Dark color variations */
+  /* --color-dark-100: hsl(var(--color-dark-hsl) 95%);
+  --color-dark-200: hsl(var(--color-dark-hsl) 80%);
+  --color-dark-300: hsl(var(--color-dark-hsl) 60%);
+  --color-dark-400: hsl(var(--color-dark-hsl) 50%);
+  --color-dark-500: hsl(var(--color-dark-hsl) 40%);
+  --color-dark-600: hsl(var(--color-dark-hsl) 30%);
+  --color-dark-700: hsl(var(--color-dark-hsl) 20%);
+  --color-dark-800: hsl(var(--color-dark-hsl) 10%);
+  --color-dark-900: hsl(var(--color-dark-hsl) 5%); */
+}
+/* OPTIA FONT FAMILY */
+@font-face {
+  font-family: "Optia";
+  src: url("../src/assets/fonts/OPTIAltheaBold-Two/optialtheabold-two-webfont.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+/* ROBOTO FONT FAMILY */
+
+@font-face {
+  font-family: "Inter";
+  src: url("../src/assets/fonts/Inter/Inter-light.woff2")
+    format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../src/assets/fonts/Inter/Inter-regular.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../src/assets/fonts/Inter/Inter-medium.woff2")
+    format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../src/assets/fonts/Inter/Inter-SemiBold.woff2")
+    format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../src/assets/fonts/Inter/Inter-bold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../src/assets/fonts/Inter/Inter-extrabold.woff2")
+    format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../src/assets/fonts/Inter/Inter-black.woff2")
+    format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+:root {
+/* SET FONT FAMILY VARIABLES */
+--ff-primary: "Optia", "Franklin Gothic Medium", sans-serif;
+--ff-secondary: "Inter", "Franklin Gothic Medium", sans-serif;
+/* SET FONT SIZES */
+--fs-100: 0.8rem;
+--fs-200: 1.2rem;
+--fs-300: 1.4rem;
+--fs-400: 1.6rem;
+--fs-500: 2.4rem;
+--fs-600: 3.2rem;
+--fs-700: 3.6rem;
+--fs-800: 4.8rem;
+--fs-900: 6.4rem;
+}
