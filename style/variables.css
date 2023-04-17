@@ -70,66 +70,69 @@
 
 @font-face {
   font-family: "Inter";
-  src: url("../src/assets/fonts/Inter/Inter-light.woff2")
-    format("woff2");
+  src: url("../src/assets/fonts/Inter/Inter-light.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: "Inter";
-  src: url("../src/assets/fonts/Inter/Inter-regular.woff2")
-    format("woff2");
+  src: url("../src/assets/fonts/Inter/Inter-regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Inter";
-  src: url("../src/assets/fonts/Inter/Inter-medium.woff2")
-    format("woff2");
+  src: url("../src/assets/fonts/Inter/Inter-medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: "Inter";
-  src: url("../src/assets/fonts/Inter/Inter-SemiBold.woff2")
-    format("woff2");
+  src: url("../src/assets/fonts/Inter/Inter-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: "Inter";
-  src: url("../src/assets/fonts/Inter/Inter-bold.woff2")
-    format("woff2");
+  src: url("../src/assets/fonts/Inter/Inter-bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "Inter";
-  src: url("../src/assets/fonts/Inter/Inter-extrabold.woff2")
-    format("woff2");
+  src: url("../src/assets/fonts/Inter/Inter-extrabold.woff2") format("woff2");
   font-weight: 800;
   font-style: normal;
 }
 @font-face {
   font-family: "Inter";
-  src: url("../src/assets/fonts/Inter/Inter-black.woff2")
-    format("woff2");
+  src: url("../src/assets/fonts/Inter/Inter-black.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
 }
 
 :root {
-/* SET FONT FAMILY VARIABLES */
---ff-primary: "Optia", "Franklin Gothic Medium", sans-serif;
---ff-secondary: "Inter", "Franklin Gothic Medium", sans-serif;
-/* SET FONT SIZES */
---fs-100: 0.8rem;
---fs-200: 1.2rem;
---fs-300: 1.4rem;
---fs-400: 1.6rem;
---fs-500: 2.4rem;
---fs-600: 3.2rem;
---fs-700: 3.6rem;
---fs-800: 4.8rem;
---fs-900: 6.4rem;
+  /* SET FONT FAMILY VARIABLES */
+  --ff-primary: "Optia", "Franklin Gothic Medium", sans-serif;
+  --ff-secondary: "Inter", "Franklin Gothic Medium", sans-serif;
+  /* SET FONT SIZES */
+  --fs-100: 0.8rem;
+  --fs-200: 1.2rem;
+  --fs-300: 1.4rem;
+  --fs-400: 1.6rem;
+  --fs-500: 2.4rem;
+  --fs-600: 3.2rem;
+  --fs-700: 3.6rem;
+  --fs-800: 4.8rem;
+  --fs-900: 6.4rem;
+  /* SET FONT WEIGHT */
+  --fw-bk: 900;
+  --fw-eb: 800;
+  --fw-b: 700;
+  --fw-sb: 600;
+  --fw-m: 500;
+  --fw-r: 400;
+  --fw-l: 300;
+  --fw-el: 200;
+  --fw-t: 100;
 }
