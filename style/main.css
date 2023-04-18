@@ -71,6 +71,7 @@ h4 {
   font-family: var(--ff-primary);
   font-size: var(--fs-400);
   font-weight: var(--fw-b);
+  cursor: pointer;
 }
 #shop-submenu {
   font-family: var(--ff-primary);

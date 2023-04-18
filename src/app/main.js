@@ -34,21 +34,16 @@ buttonEl.addEventListener("click", () => {
 
 // SHOP Dropdown Menu
 
-const shopButton = document.querySelector(
-  ".navbar__shop-menu"
-);
+const shopButton = document.querySelector(".navbar__shop-menu");
 const shopSubMenu = document.querySelector("#shop-submenu");
 
-shopButton.forEach((button) => {
-  button.addEventListener("click", () => {
-    shopSubMenu.classList.toggle("visible");
-  });
+shopButton.addEventListener("click", () => {
+  shopSubMenu.classList.toggle("visible");
 });
 
 document.addEventListener("click", (event) => {
   if (
-    !shopButton[0].contains(event.target) &&
-    !shopButton[1].contains(event.target) &&
+    !shopButton.contains(event.target) &&
     !shopSubMenu.contains(event.target)
   ) {
     shopSubMenu.classList.remove("visible");
