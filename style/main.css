@@ -3,6 +3,10 @@ body {
   font-weight: var(--fw-r);
   background: var(--color-dark-700);
 }
+header {
+  position: relative;
+  z-index: 9999;
+}
 h2 {
   font-size: var(--fs-400);
   font-weight: var(--fw-sb);
@@ -68,6 +72,24 @@ h4 {
   font-size: var(--fs-400);
   font-weight: var(--fw-b);
 }
+#shop-submenu {
+  font-family: var(--ff-primary);
+  position: absolute;
+  top: 8rem;
+  background-color: var(--color-dark-50a);
+  color: var(--color-neutral-hsl);
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 1em;
+  transform: translate(-2.6rem);
+  padding: 2.4rem 2.4rem;
+  backdrop-filter: blur(1rem);
+}
+.visible {
+  display: flex !important;
+}
 .navbar__chevron-icon {
   color: var(--color-neutral-hsl);
   margin-left: 0.2rem;
@@ -126,7 +148,7 @@ h4 {
   position: absolute;
   top: 32rem;
   right: 10rem;
-  z-index: 1000;
+  z-index: 2;
 }
 .hero__header {
   font-size: var(--fs-500);
@@ -147,7 +169,6 @@ strong {
   font-size: var(--fs-900);
   font-weight: var(--fw-eb);
   line-height: 1em;
-  z-index: 1000;
 }
 .black-button {
   width: 11rem;
@@ -167,7 +188,10 @@ strong {
 }
 
 /* SWIPER MAIN SECTION */
-
+.swiper {
+  position: relative;
+  z-index: 0;
+}
 .swiper-wrapper {
   width: 100%;
   /* cursor: pointer; */
@@ -179,7 +203,6 @@ strong {
 .swiper-slide > img {
   object-fit: cover;
 }
-
 .swiper-pagination {
   position: static;
   height: 8rem;
@@ -268,7 +291,6 @@ strong {
   position: relative;
   grid-column: span 1;
   grid-row: span 1;
-  /* place-self: center; */
   background-color: var(--color-dark-hsl);
   filter: drop-shadow(3px 4px 8px rgba(0, 0, 0, 0.25));
 }
@@ -279,7 +301,7 @@ strong {
 }
 .about-us__card figcaption {
   position: absolute;
-  z-index: 1000;
+  z-index: 999;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -391,7 +413,7 @@ strong {
 }
 .footer__main > li li {
   font-size: var(--fs-400);
-  font-weight: var(--fw-sb);
+  font-weight: var(--fw-m);
   text-transform: none;
   margin-bottom: 1.4rem;
   letter-spacing: 0.04em;

@@ -25,10 +25,32 @@ const swiper = new Swiper(".swiper", {
   // },
 });
 
-const swiperEl = document.querySelector('.swiper');
-const buttonEl = document.querySelector('.swiper');
+const swiperEl = document.querySelector(".swiper");
+const buttonEl = document.querySelector(".swiper");
 
-buttonEl.addEventListener('click', () => {
+buttonEl.addEventListener("click", () => {
   swiperEl.swiper.slideNext();
 });
 
+// SHOP Dropdown Menu
+
+const shopButton = document.querySelector(
+  ".navbar__shop-menu"
+);
+const shopSubMenu = document.querySelector("#shop-submenu");
+
+shopButton.forEach((button) => {
+  button.addEventListener("click", () => {
+    shopSubMenu.classList.toggle("visible");
+  });
+});
+
+document.addEventListener("click", (event) => {
+  if (
+    !shopButton[0].contains(event.target) &&
+    !shopButton[1].contains(event.target) &&
+    !shopSubMenu.contains(event.target)
+  ) {
+    shopSubMenu.classList.remove("visible");
+  }
+});
