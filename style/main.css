@@ -20,6 +20,12 @@ h4 {
   font-style: italic;
   line-height: 1.2083em;
 }
+p[class*="__text"] {
+  font-size: var(--fs-400);
+  font-weight: var(--fw-r);
+  color: var(--color-primary-hsl);
+  letter-spacing: 0.03em;
+}
 
 /* UTILITIES */
 .fluid-wrapper {
@@ -175,8 +181,8 @@ h4 {
   letter-spacing: 0.08em;
 }
 strong {
-  font-size: var(--fs-900);
-  font-weight: var(--fw-eb);
+  font-size: var(--fs-1000);
+  font-weight: var(--fw-bk);
   line-height: 1em;
 }
 .black-button {
@@ -255,48 +261,33 @@ strong {
   height: 89.6rem;
   margin-block: 4.8rem;
 }
-.about-us__left {
-  grid-column: span 6;
-  grid-row: span 2;
+.about-us > * {
   background-color: var(--color-neutral-hsl);
-  background-image: url(../src/assets/img/overlay_textures/Dirt_Textures/PNG/SG-Dirt-Texture-01.png);
   filter: drop-shadow(3px 4px 8px rgba(0, 0, 0, 0.25));
 }
 .about-us__heading-box {
   margin: 4.2rem auto;
 }
-.about-us__img {
-  margin: 4.2rem auto 0;
-  width: 95%;
-}
-.about-us__text {
-  font-size: var(--fs-400);
-  font-weight: var(--fw-r);
-  color: var(--color-primary-hsl);
-  letter-spacing: 0.03em;
-  margin-inline: 11rem;
-}
-.about-us__right {
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-columns: repeat(2, 1fr);
+.about-us__big {
+  background-image: url(../src/assets/img/overlay_textures/Dirt_Textures/PNG/SG-Dirt-Texture-01.png);
   grid-column: span 6;
   grid-row: span 2;
-  gap: 2.4rem;
 }
-.about-us__card {
-  position: relative;
-  grid-column: span 1;
+[class*="about-us__card"] {
+  grid-column: span 3;
   grid-row: span 1;
   background-color: var(--color-dark-hsl);
-  filter: drop-shadow(3px 4px 8px rgba(0, 0, 0, 0.25));
+  position: relative;
 }
-.about-us__card > img {
+.about-us__text {
+  margin-inline: 11rem;
+}
+[class*="about-us__card"] > img {
   object-fit: cover;
   height: 100%;
   filter: opacity(60%);
 }
-.about-us__card figcaption {
+[class*="about-us__card"] figcaption {
   position: absolute;
   z-index: 999;
   left: 50%;
@@ -306,6 +297,7 @@ strong {
   color: var(--color-neutral-hsl);
   cursor: pointer;
 }
+
 /* TESTIMONIAL SECTION */
 .testimonial {
   display: grid;
@@ -353,6 +345,7 @@ strong {
   border-radius: 50%;
   object-fit: cover;
 }
+
 /* OUR LOCATION SECTION */
 .our-location {
   grid-column: span 6;
@@ -364,12 +357,6 @@ strong {
 }
 .our-location__heading-box {
   margin: 4.2rem auto;
-}
-.our-location__text {
-  font-size: var(--fs-400);
-  font-weight: var(--fw-r);
-  color: var(--color-primary-hsl);
-  letter-spacing: 0.03em;
 }
 
 /* FOOTER SECTION */
