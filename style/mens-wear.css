@@ -1,0 +1,65 @@
+/* HEADER SECTION */
+.subheader {
+  background-color: var(--color-neutral-hsl);
+  background-image: url(/src/assets/img/overlay_textures/Dirt_Textures/PNG/SG-Dirt-Texture-02i.png);
+}
+.subheader__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 19.2rem;
+}
+.subheader__header {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-eb);
+  letter-spacing: 0.03em;
+}
+.subheader__header::after {
+  content: "";
+  height: 0.5rem;
+  width: 60%;
+  background-color: var(--color-dark-hsl);
+  display: block;
+  transform: translateX(30%);
+}
+option,
+select {
+  font-size: var(--fs-400);
+  font-weight: var(--fw-b);
+  letter-spacing: 0.03em;
+}
+/* PRODUCTS SECTION */
+.product {
+  height: auto;
+  margin-block: 8.8rem;
+  row-gap: 8.8rem;
+}
+.product__card {
+  grid-column: span 4;
+  grid-row: span 1;
+  height: 76.8rem;
+  background-color: var(--color-dark-hsl);
+}
+.product__body {
+  background-color: var(--color-neutral-hsl);
+  padding: 2.4rem;
+}
+.product__price {
+  display: inline-block;
+  font-size: var(--fs-750);
+  font-weight: var(--fw-r);
+  letter-spacing: 0.03em;
+  font-style: normal;
+  line-height: 1.8em;
+}
+.product__add-cart-button {
+  width: 19.2rem;
+  height: 4rem;
+  background-color: var(--color-dark-hsl);
+  color: var(--color-neutral-hsl);
+  border: none;
+  font-size: var(--fs-450);
+  font-weight: var(--fw-b);
+  letter-spacing: 0.06em;
+  cursor: pointer;
+}

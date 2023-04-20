@@ -22,6 +22,7 @@
       href="node_modules/@fortawesome/fontawesome-free/css/all.min.css"
     />
     <link rel="stylesheet" href="node_modules\swiper\swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style\common.css" />
     <link rel="stylesheet" href="style\main.css" />
 
     <!-- SCRIPTS -->
@@ -31,27 +32,29 @@
   <body>
     <header class="fluid-wrapper">
       <nav class="navbar wrapper">
-        <img
-          class="navbar__logo"
-          src="src\assets\img\official_logo\logo_text.png"
-          alt="logo"
-        />
+        <a href="/index.html">
+          <img
+            class="navbar__logo"
+            src="src\assets\img\official_logo\logo_text.png"
+            alt="logo"
+          />
+        </a>
         <ul class="navbar__main">
-          <li><a class="navbar__item" href="">HOME</a></li>
+          <li><a class="navbar__item" href="/index.html">HOME</a></li>
           <li class="navbar__shop-menu">
             <a class="navbar__item">SHOP</a
             ><i
               class="fas fa-sharp fa-regular fa-circle-chevron-down fa-1x navbar__chevron-icon"
             ></i>
             <ul id="shop-submenu" class="">
-              <li><a href="">MEN'S WEAR</a></li>
-              <li><a href="">WOMEN'S WEAR</a></li>
-              <li><a href="">SHOES</a></li>
-              <li><a href="">APPAREL</a></li>
+              <li><a href="/mens_clothing.html">MEN'S CLOTHING</a></li>
+              <li><a href="/womens_clothing.html">WOMEN'S CLOTHING</a></li>
+              <li><a href="/shoes.html">SHOES</a></li>
+              <li><a href="/apparel.html">APPAREL</a></li>
             </ul>
           </li>
           <li><a class="navbar__item" href="">ABOUT</a></li>
-          <li><a class="navbar__item" href="">CONTACT</a></li>
+          <li><a class="navbar__item" href="/contact.html">CONTACT</a></li>
         </ul>
         <button class="navbar__cart">CART</button>
       </nav>
@@ -108,7 +111,7 @@
         </div>
       </section>
 
-      <section class="about-us wrapper">
+      <section class="about-us wrapper default-grid">
         <figure class="about-us__card-clothing">
           <figcaption class="about-us__cards-heading-box">
             <h2>CLOTHING</h2>
