@@ -53,24 +53,23 @@
               <li><a href="/apparel.html">APPAREL</a></li>
             </ul>
           </li>
-          <li><a class="navbar__item" href="">ABOUT</a></li>
+          <li><a class="navbar__item" href="/about.html">ABOUT</a></li>
           <li><a class="navbar__item" href="/contact.html">CONTACT</a></li>
         </ul>
         <button class="navbar__cart">CART</button>
       </nav>
-      <section class="fluid-wrapper subheader">
-        <div class="subheader__wrapper wrapper">
-          <select name="" id="" class="subheader__sort-menu">
-            <option value="">SORT BY</option>
-            <option value="">BY PRICE</option>
-            <option value="">BY POPULARITY</option>
-          </select>
-          <h1 class="subheader__header">MEN'S WEAR</h1>
-          <select name="" id="" class="subheader__sort-menu"></select>
-        </div>
-      </section>
     </header>
-
+    <section class="fluid-wrapper subheader">
+      <div class="subheader__wrapper wrapper">
+        <select name="" id="" class="subheader__sort-menu">
+          <option value="">SORT BY</option>
+          <option value="">BY PRICE</option>
+          <option value="">BY POPULARITY</option>
+        </select>
+        <h1 class="subheader__header">MEN'S CLOTHING</h1>
+        <select name="" id="" class="subheader__sort-menu"></select>
+      </div>
+    </section>
     <main>
       <section class="product wrapper default-grid">
         <div class="product__card">
@@ -81,12 +80,14 @@
               class="product__image"
           /></a>
           <div class="product__body">
-            <p class="product__description">
+            <p class="product__text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui illum
               hic deserunt sint asperiores quo delectus nihil.
             </p>
-            <h4 class="product__price">74.55$</h4>
-            <button class="product__add-cart-button">ADD TO CART</button>
+            <div class="product__tags">
+              <span class="product__price">74.55$</span>
+              <button class="product__add-cart-button">ADD TO CART</button>
+            </div>
           </div>
         </div>
         <div class="product__card">
@@ -97,12 +98,14 @@
               class="product__image"
           /></a>
           <div class="product__body">
-            <p class="product__description">
+            <p class="product__text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui illum
               hic deserunt sint asperiores quo delectus nihil.
             </p>
-            <h4 class="product__price">74.55$</h4>
-            <button class="product__add-cart-button">ADD TO CART</button>
+            <div class="product__tags">
+              <span class="product__price">74.55$</span>
+              <button class="product__add-cart-button">ADD TO CART</button>
+            </div>
           </div>
         </div>
         <div class="product__card">
@@ -113,12 +116,14 @@
               class="product__image"
           /></a>
           <div class="product__body">
-            <p class="product__description">
+            <p class="product__text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui illum
               hic deserunt sint asperiores quo delectus nihil.
             </p>
-            <h4 class="product__price">74.55$</h4>
-            <button class="product__add-cart-button">ADD TO CART</button>
+            <div class="product__tags">
+              <span class="product__price">74.55$</span>
+              <button class="product__add-cart-button">ADD TO CART</button>
+            </div>
           </div>
         </div>
         <div class="product__card">
@@ -129,12 +134,14 @@
               class="product__image"
           /></a>
           <div class="product__body">
-            <p class="product__description">
+            <p class="product__text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui illum
               hic deserunt sint asperiores quo delectus nihil.
             </p>
-            <h4 class="product__price">74.55$</h4>
-            <button class="product__add-cart-button">ADD TO CART</button>
+            <div class="product__tags">
+              <span class="product__price">74.55$</span>
+              <button class="product__add-cart-button">ADD TO CART</button>
+            </div>
           </div>
         </div>
         <div class="product__card">
@@ -145,12 +152,14 @@
               class="product__image"
           /></a>
           <div class="product__body">
-            <p class="product__description">
+            <p class="product__text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui illum
               hic deserunt sint asperiores quo delectus nihil.
             </p>
-            <h4 class="product__price">74.55$</h4>
-            <button class="product__add-cart-button">ADD TO CART</button>
+            <div class="product__tags">
+              <span class="product__price">74.55$</span>
+              <button class="product__add-cart-button">ADD TO CART</button>
+            </div>
           </div>
         </div>
         <div class="product__card">
@@ -161,16 +170,27 @@
               class="product__image"
           /></a>
           <div class="product__body">
-            <p class="product__description">
+            <p class="product__text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui illum
               hic deserunt sint asperiores quo delectus nihil.
             </p>
-            <h4 class="product__price">74.55$</h4>
-            <button class="product__add-cart-button">ADD TO CART</button>
+            <div class="product__tags">
+              <span class="product__price">74.55$</span>
+              <button class="product__add-cart-button">ADD TO CART</button>
+            </div>
           </div>
         </div>
       </section>
     </main>
+    <section class="pagination fluid-wrapper">
+      <div class="pagination__wrapper wrapper">
+        <a class="pagination__button">Prev</a>
+        <span class="pagination__page-index" id="page-current">1</span>
+        <span class="pagination__of">of</span>
+        <span class="pagination__page-index" id="page-total">1</span>
+        <a class="pagination__button">Next</a>
+      </div>
+    </section>
     <footer class="footer fluid-wrapper">
       <div class="footer__wrapper wrapper">
         <ul class="footer__main">
