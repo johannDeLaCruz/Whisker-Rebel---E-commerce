@@ -27,6 +27,7 @@
 
     <!-- SCRIPTS -->
     <script src="node_modules\swiper\swiper-bundle.min.js" defer></script>
+    <script src="src/app/swiper.js" defer></script>
     <script src="src\app\main.js" defer></script>
   </head>
   <body>
@@ -46,11 +47,23 @@
             ><i
               class="fas fa-sharp fa-regular fa-circle-chevron-down fa-1x navbar__chevron-icon"
             ></i>
-            <ul id="shop-submenu" class="">
-              <li><a href="/mens_clothing.html">MEN'S CLOTHING</a></li>
-              <li><a href="/womens_clothing.html">WOMEN'S CLOTHING</a></li>
-              <li><a href="/shoes.html">SHOES</a></li>
-              <li><a href="/apparel.html">APPAREL</a></li>
+            <ul id="shop-submenu">
+              <li>
+                <a href="/mens_clothing.html" class="navbar__submenu-item"
+                  >MEN'S CLOTHING</a
+                >
+              </li>
+              <li>
+                <a href="/womens_clothing.html" class="navbar__submenu-item"
+                  >WOMEN'S CLOTHING</a
+                >
+              </li>
+              <li>
+                <a href="/shoes.html" class="navbar__submenu-item">SHOES</a>
+              </li>
+              <li>
+                <a href="/apparel.html" class="navbar__submenu-item">APPAREL</a>
+              </li>
             </ul>
           </li>
           <li><a class="navbar__item" href="/about.html">ABOUT</a></li>
@@ -94,7 +107,6 @@
         </div>
         <div class="swiper-pagination fluid-wrapper"></div>
       </section>
-
       <section class="partners wrapper">
         <div class="partners__box">
           <div class="partners__heading-box"><h2>WE WORK WITH</h2></div>
@@ -110,7 +122,6 @@
           </div>
         </div>
       </section>
-
       <section class="about-us wrapper default-grid">
         <figure class="about-us__card-clothing">
           <figcaption class="about-us__cards-heading-box">

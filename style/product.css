@@ -1,0 +1,98 @@
+.product-details {
+  background-color: var(--color-neutral-hsl);
+  /* background-image: url(/src/assets/img/overlay_textures/Dirt_Textures/PNG/SG-Dirt-Texture-01i.png); */
+  padding: 11rem;
+  margin-block: 10.4rem;
+  display: flex;
+  justify-content: space-between;
+  filter: drop-shadow(3px 4px 8px rgba(0, 0, 0, 0.25));
+}
+
+/* SWIPER SECTION */
+.mySwiper2 {
+  width: 100%;
+  height: 100%;
+}
+.mySwiper .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.mySwiper .swiper-slide {
+  width: 50%;
+  height: 50%;
+  opacity: 0.4;
+}
+.mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+.mySwiper {
+  width: 10rem;
+}
+.mySwiper .swiper-wrapper {
+  width: 100%;
+}
+:root {
+  --swiper-navigation-color: var(--color-neutral-hsl);
+}
+/* INFO SECTION */
+.product-details__info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 13.4rem;
+  flex-basis: content;
+}
+.product-details__info > div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+}
+h1 {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-sb);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.product-details__text {
+  margin-top: 4rem;
+  width: 40ch;
+}
+.product-details__price {
+  font-size: var(--fs-800);
+  font-weight: var(--fw-r);
+}
+.product-details__color {
+  font-size: var(--fs-400);
+  font-weight: var(--fw-b);
+  letter-spacing: 0.03em;
+  width: 19.2rem;
+  margin-block: auto;
+  display: flex;
+  gap: 0.8rem;
+}
+.product-details__color::after {
+  content: "";
+  display: inline-block;
+  width: 2.4rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--color-dark-hsl);
+}
+article button {
+  width: 19.2rem;
+  height: 4.8rem;
+  background-color: var(--color-dark-hsl);
+  color: var(--color-neutral-hsl);
+  border: none;
+  font-size: var(--fs-450);
+  font-weight: var(--fw-b);
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  text-transform: uppercase;
+}
+article button:hover {
+  background-color: var(--color-dark-700);
+  transition: background-color 0.2s;
+}
