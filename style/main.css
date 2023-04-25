@@ -1,22 +1,26 @@
 /* HERO TEXT */
 .hero {
   position: absolute;
-  top: 32rem;
-  right: 10rem;
+  top: 50%;
+  right: 5%;
   z-index: 2;
+  text-align: end;
+  transform: translateY(-40%);
+  color: var(--color-neutral-hsl);
+  opacity: 0.8;
 }
 .hero__header {
   font-size: var(--fs-500);
   text-transform: uppercase;
   font-weight: var(--fw-m);
-  color: var(--color-dark-hsl);
+  /* color: var(--color-dark-hsl); */
   line-height: 1em;
   letter-spacing: 0.02em;
 }
 .hero__subtitle {
   font-size: var(--fs-300);
   font-weight: var(--fw-sb);
-  color: var(--color-neutral-hsl);
+  /* color: var(--color-neutral-hsl); */
   margin-block: 5rem 2.4rem;
   letter-spacing: 0.08em;
 }
@@ -103,30 +107,47 @@ strong {
   background-image: url(../src/assets/img/overlay_textures/Dirt_Textures/PNG/SG-Dirt-Texture-01.png);
   grid-column: span 6;
   grid-row: span 2;
-}
-[class*="about-us__card"] {
-  grid-column: span 3;
-  grid-row: span 1;
-  background-color: var(--color-dark-hsl);
-  position: relative;
+  padding-block: 5.6rem;
 }
 .about-us__text {
   margin-inline: 11rem;
 }
-[class*="about-us__card"] > img {
-  object-fit: cover;
-  height: 100%;
-  filter: opacity(60%);
+[class*="about-us__card"] {
+  grid-column: span 3;
+  grid-row: span 1;
+  position: relative;
+  padding-inline: 2.4rem;
+}
+figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
 }
 [class*="about-us__card"] figcaption {
-  position: absolute;
-  z-index: 999;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   border: 0.3rem solid var(--color-neutral-hsl);
   color: var(--color-neutral-hsl);
   cursor: pointer;
+}
+.about-us__card-clothing {
+  background-image: url(../src/assets/img/shop_photos/jacket2.png);
+}
+.about-us__card-apparel {
+  background-image: url(../src/assets/img/shop_photos/choker2.png);
+}
+.about-us__card-kits {
+  background-image: url(../src/assets/img/shop_photos/outfit.png);
+}
+.about-us__card-shoes {
+  background-image: url(../src/assets/img/shop_photos/shoes.png);
+}
+[class*="about-us__card"]::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-dark-40a);
+  z-index: -1;
 }
 
 /* TESTIMONIAL SECTION */
@@ -189,5 +210,3 @@ strong {
 .our-location__heading-box {
   margin: 4.2rem auto;
 }
-
-

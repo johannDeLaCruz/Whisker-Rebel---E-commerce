@@ -97,18 +97,13 @@ p[class*="__text"] {
   gap: 1em;
   transform: translate(-2.6rem);
   padding: 2.4rem;
-  backdrop-filter: blur(0.5rem);
 }
-/* .navbar__submenu-item:hover::before {
-  content: "";
+#cart-dropdown {
   position: absolute;
-  top: 1.6rem;
-  height: 0.3rem;
-  width: 100%;
-  background-color: var(--color-neutral-hsl);
-  animation: slide-in 0.3s forwards;
-  transform-origin: left;
-} */
+  top: 8rem;
+  padding: 2.4rem;
+}
+
 .visible {
   display: flex !important;
 }

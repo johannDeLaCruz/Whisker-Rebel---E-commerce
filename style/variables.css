@@ -6,7 +6,9 @@
   --color-neutral-hsl: hsl(0, 0%, 100%, 1);
   --color-neutral-50a: hsl(0, 0%, 100%, 0.5);
   --color-dark-hsl: hsl(220, 7%, 9%, 1);
+  --color-dark-40a: hsl(220, 7%, 9%, 0.4);
   --color-dark-50a: hsl(220, 7%, 9%, 0.5);
+  --color-dark-60a: hsl(220, 7%, 9%, 0.6);
   --color-dark-700: hsl(210, 8%, 23%);
   /* Primary color variations */
   /* --color-primary-100: hsl(var(--color-primary-hsl) 95%);
