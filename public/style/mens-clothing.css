@@ -1,7 +1,7 @@
 /* HEADER SECTION */
 .subheader {
   background-color: var(--color-neutral-hsl);
-  background-image: url(/src/assets/img/overlay_textures/Dirt_Textures/PNG/SG-Dirt-Texture-02i.png);
+  background-image: url(/assets/img/overlay_textures/Dirt_Textures/PNG/SG-Dirt-Texture-02i.png);
 }
 .subheader__wrapper {
   display: flex;
@@ -13,6 +13,7 @@
   font-size: var(--fs-600);
   font-weight: var(--fw-eb);
   letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 .subheader__header::after {
   content: "";
@@ -50,7 +51,7 @@ select {
 }
 .product__body {
   background-color: var(--color-neutral-hsl);
-  background-image: url(/src/assets/img/overlay_textures/Dirt_Textures/PNG/SG-Dirt-Texture-02i.png);
+  background-image: url(/assets/img/overlay_textures/Dirt_Textures/PNG/SG-Dirt-Texture-02i.png);
   padding: 2.4rem;
 }
 .product__price {
@@ -87,7 +88,7 @@ select {
 .pagination {
   height: 19.2rem;
   background-color: var(--color-neutral-hsl);
-  background-image: url(/src/assets/img/overlay_textures/Dirt_Textures/PNG/SG-Dirt-Texture-02.png);
+  background-image: url(/assets/img/overlay_textures/Dirt_Textures/PNG/SG-Dirt-Texture-02.png);
   font-size: var(--fs-500);
   font-weight: var(--fw-b);
   letter-spacing: 0.03em;

@@ -6,73 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Whisker Rebel | HomePage |</title>
     <!-- FAVICON -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/img/favicon_package/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/img/favicon_package/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/img/favicon_package/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/assets/img/favicon_package/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/assets/img/favicon_package/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
     <!-- STYLESHEETS -->
-    <link rel="stylesheet" href="style\reset.css" />
-    <link rel="stylesheet" href="style\variables.css" />
+    <link rel="stylesheet" href="\style\reset.css" />
+    <link rel="stylesheet" href="\style\variables.css" />
     <link
       rel="stylesheet"
-      href="node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+      href="\@fortawesome\fontawesome-free\css\all.min.css"
     />
-    <link rel="stylesheet" href="node_modules\swiper\swiper-bundle.min.css" />
-    <link rel="stylesheet" href="style\common.css" />
-    <link rel="stylesheet" href="style\main.css" />
+    <link rel="stylesheet" href="\swiper\swiper-bundle.min.css" />
+    <link rel="stylesheet" href="\style\common.css" />
+    <link rel="stylesheet" href="\style\main.css" />
     <!-- SCRIPTS -->
-    <script src="node_modules\swiper\swiper-bundle.min.js" defer></script>
-    <script src="src/app/swiper.js" defer></script>
-    <script src="src\app\main.js" defer></script>
+    <script src="\swiper\swiper-bundle.min.js" defer></script>
+    <script src="\app\swiper.js" defer></script>
+    <script src="\app\main.js" defer></script>
   </head>
   <body>
-    <header class="fluid-wrapper">
-      <nav class="navbar wrapper">
-        <a href="/index.html">
-          <img
-            class="navbar__logo"
-            src="src\assets\img\official_logo\logo_text.png"
-            alt="logo"
-          />
-        </a>
-        <ul class="navbar__main">
-          <li><a class="navbar__item" href="/index.html">HOME</a></li>
-          <li class="navbar__shop-menu">
-            <a class="navbar__item">SHOP</a
-            ><i
-              class="fas fa-sharp fa-regular fa-circle-chevron-down fa-1x navbar__chevron-icon"
-            ></i>
-            <ul id="shop-submenu">
-              <li>
-                <a href="/mens_clothing.html" class="navbar__submenu-item"
-                  >MEN'S CLOTHING</a
-                >
-              </li>
-              <li>
-                <a href="/womens_clothing.html" class="navbar__submenu-item"
-                  >WOMEN'S CLOTHING</a
-                >
-              </li>
-              <li>
-                <a href="/shoes.html" class="navbar__submenu-item">SHOES</a>
-              </li>
-              <li>
-                <a href="/apparel.html" class="navbar__submenu-item">APPAREL</a>
-              </li>
-            </ul>
-          </li>
-          <li><a class="navbar__item" href="/about.html">ABOUT</a></li>
-          <li><a class="navbar__item" href="/contact.html">CONTACT</a></li>
-        </ul>
-        <button class="navbar__cart">
-          CART
-          <div id="cart-dropdown"></div>
-        </button>
-      </nav>
-    </header>
+    <%- include('header.html') %>
     <main>
       <section class="hero">
         <h1 class="hero__header">
@@ -83,27 +58,27 @@
           Explore our collection of alternative fashion <br />
           and make a statement today!
         </p>
-        <button class="black-button" href="/mens_clothing.html">EXPLORE</button>
+        <button class="black-button" href="/mens_clothing">EXPLORE</button>
       </section>
       <section class="swiper mySwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <img src="src\assets\img\hero_image\hero1a.png" alt="image" />
+            <img src="\assets\img\hero_image\hero1a.png" alt="image" />
           </div>
           <div class="swiper-slide">
-            <img src="src\assets\img\hero_image\hero4a.png" alt="image" />
+            <img src="\assets\img\hero_image\hero4a.png" alt="image" />
           </div>
           <div class="swiper-slide">
-            <img src="src\assets\img\hero_image\hero9a.png" alt="image" />
+            <img src="\assets\img\hero_image\hero9a.png" alt="image" />
           </div>
           <div class="swiper-slide">
-            <img src="src\assets\img\hero_image\hero6a.png" alt="image" />
+            <img src="\assets\img\hero_image\hero6a.png" alt="image" />
           </div>
           <div class="swiper-slide">
-            <img src="src\assets\img\hero_image\hero10a.png" alt="image" />
+            <img src="\assets\img\hero_image\hero10a.png" alt="image" />
           </div>
           <div class="swiper-slide">
-            <img src="src\assets\img\hero_image\hero8a.png" alt="image" />
+            <img src="\assets\img\hero_image\hero8a.png" alt="image" />
           </div>
         </div>
         <div class="swiper-pagination fluid-wrapper"></div>
@@ -112,14 +87,8 @@
         <div class="partners__box">
           <div class="partners__heading-box"><h2>WE WORK WITH</h2></div>
           <div class="partners__img">
-            <img
-              src="src\assets\img\brands_img\brandsHORnobg.png"
-              alt="brands"
-            />
-            <img
-              src="src\assets\img\brands_img\brandsHORnobg2.png"
-              alt="brands"
-            />
+            <img src="\assets\img\brands_img\brandsHORnobg.png" alt="brands" />
+            <img src="\assets\img\brands_img\brandsHORnobg2.png" alt="brands" />
           </div>
         </div>
       </section>
@@ -137,7 +106,7 @@
         <div class="about-us__big">
           <img
             class="about-us__img"
-            src="src\assets\img\official_logo\official logo.png"
+            src="\assets\img\official_logo\official logo.png"
             alt="big-logo"
           />
           <div class="about-us__heading-box"><h2>ABOUT US</h2></div>
@@ -180,7 +149,7 @@
             </blockquote>
             <img
               class="testimonial__image"
-              src="src/assets/img/testimonials_photo/testimonial2.png"
+              src="/assets/img/testimonials_photo/testimonial2.png"
               alt=""
             />
           </figure>
@@ -194,7 +163,7 @@
             </blockquote>
             <img
               class="testimonial__image"
-              src="src/assets/img/testimonials_photo/testimonial3.png"
+              src="/assets/img/testimonials_photo/testimonial3.png"
               alt=""
             />
           </figure>
@@ -208,7 +177,7 @@
             </blockquote>
             <img
               class="testimonial__image"
-              src="src/assets/img/testimonials_photo/testimonial5.png"
+              src="/assets/img/testimonials_photo/testimonial5.png"
               alt=""
             />
           </figure>
@@ -217,7 +186,7 @@
           <div class="our-location__card">
             <a>
               <img
-                src="src\assets\img\shop_photos\shop_interior4.png"
+                src="\assets\img\shop_photos\shop_interior4.png"
                 alt="photo"
                 class="our-location__image"
               />
@@ -235,54 +204,6 @@
         </section>
       </div>
     </main>
-    <footer class="footer fluid-wrapper">
-      <div class="footer__wrapper wrapper">
-        <ul class="footer__main">
-          <li class="footer__contact-us">
-            CONTACT US
-            <ul>
-              <li class="footer__phone">+1(310)899-4461</li>
-              <li class="footer__email">CONTACT@WHISKERREBEL.COM</li>
-            </ul>
-          </li>
-          <li class="footer__address">
-            ADDRESS
-            <ul>
-              <li class="footer__address-line">
-                5205 SW 99th Ave Jasper,<br />Florida(FL), 32052
-              </li>
-            </ul>
-          </li>
-          <li class="footer__social-links">
-            SOCIAL LINKS
-            <ul>
-              <li class="footer__instagram">
-                <a href=""
-                  ><i class="fas fa-brands fa-instagram"></i>Instagram</a
-                >
-              </li>
-              <li class="footer__facebook">
-                <a href=""><i class="fas fa-brands fa-facebook"></i>Facebook</a>
-              </li>
-              <li class="footer__discord">
-                <a href=""><i class="fas fa-brands fa-discord"></i>Discord</a>
-              </li>
-              <li class="footer__twitter">
-                <a href=""><i class="fas fa-brands fa-twitter"></i>Twitter</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-
-        <div class="footer__break-line"></div>
-        <small class="footer__copyright-text"
-          >©2023 Whisker Rebel Inc. All Right Reserved Under<br />Penal Code
-          101. of US.
-        </small>
-        <!-- <small class="footer__designer-text"
-        >humbly designed by J.De La Cruz
-      </small> -->
-      </div>
-    </footer>
+    <%- include('footer.html') %>
   </body>
 </html>

@@ -71,7 +71,7 @@ strong {
   --swiper-pagination-bullet-size: 1.6rem;
   --swiper-pagination-bullet-inactive-color: var(--color-neutral-hsl);
   --swiper-pagination-bullet-inactive-opacity: 0.3;
-  --swiper-pagination-bullet-horizontal-gap: 1.6rem;
+  --swiper-pagination-bullet-horizontal-gap: 1.2rem;
 }
 
 /* PARTNERS SECTION */
@@ -80,7 +80,7 @@ strong {
 }
 .partners__box {
   background-color: var(--color-neutral-hsl);
-  background-image: url(../src/assets/img/overlay_textures/Dirt_Textures/PNG/SG-Dirt-Texture-02.png);
+  background-image: url(/assets/img/overlay_textures/Dirt_Textures/PNG/SG-Dirt-Texture-02.png);
   filter: drop-shadow(3px 4px 8px rgba(0, 0, 0, 0.25));
   padding: 7.6rem 22rem;
 }
@@ -104,7 +104,7 @@ strong {
   margin: 4.2rem auto;
 }
 .about-us__big {
-  background-image: url(../src/assets/img/overlay_textures/Dirt_Textures/PNG/SG-Dirt-Texture-01.png);
+  background-image: url(/assets/img/overlay_textures/Dirt_Textures/PNG/SG-Dirt-Texture-01.png);
   grid-column: span 6;
   grid-row: span 2;
   padding-block: 5.6rem;
@@ -130,16 +130,16 @@ figure {
   cursor: pointer;
 }
 .about-us__card-clothing {
-  background-image: url(../src/assets/img/shop_photos/jacket2.png);
+  background-image: url(/assets/img/shop_photos/jacket2.png);
 }
 .about-us__card-apparel {
-  background-image: url(../src/assets/img/shop_photos/choker2.png);
+  background-image: url(/assets/img/shop_photos/choker2.png);
 }
 .about-us__card-kits {
-  background-image: url(../src/assets/img/shop_photos/outfit.png);
+  background-image: url(/assets/img/shop_photos/outfit.png);
 }
 .about-us__card-shoes {
-  background-image: url(../src/assets/img/shop_photos/shoes.png);
+  background-image: url(/assets/img/shop_photos/shoes.png);
 }
 [class*="about-us__card"]::before {
   content: "";
@@ -169,7 +169,7 @@ figure {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(../src/assets/img/overlay_textures/Dust&Scratches_Textures/JPG/5.jpg);
+  background-image: url(/assets/img/overlay_textures/Dust&Scratches_Textures/JPG/5.jpg);
   background-blend-mode: difference;
 }
 .testimonial__text {
@@ -203,7 +203,7 @@ figure {
   grid-column: span 6;
   grid-row: span 6;
   background-color: var(--color-neutral-hsl);
-  background-image: url(../src/assets/img/overlay_textures/Dirt_Textures/PNG/SG-Dirt-Texture-02i.png);
+  background-image: url(/assets/img/overlay_textures/Dirt_Textures/PNG/SG-Dirt-Texture-02i.png);
   filter: drop-shadow(3px 4px 8px rgba(0, 0, 0, 0.25));
   padding: 7.6rem 11rem;
 }
