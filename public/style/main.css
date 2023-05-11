@@ -117,9 +117,8 @@ strong {
   grid-row: span 1;
   position: relative;
   padding-inline: 2.4rem;
-}
-figure {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-size: cover;
@@ -128,6 +127,31 @@ figure {
   border: 0.3rem solid var(--color-neutral-hsl);
   color: var(--color-neutral-hsl);
   cursor: pointer;
+  overflow: hidden;
+  transition: height 0.7s cubic-bezier(0.68, -0.5, 0.265, 1);
+  transition-delay: 0.1s;
+}
+[class*="about-us__card"] figcaption:hover {
+  height: 32rem;
+  transition-duration: 0.7s;
+  background-color: var(--color-dark-50a);
+}
+[class*="about-us__card"] h2 {
+  position: absolute;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+[class*="about-us__card"] figcaption:hover h2 {
+  opacity: 0;
+}
+[class*="about-us__card"] p {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  text-align: start;
+}
+[class*="about-us__card"] figcaption:hover p {
+  display: block;
+  opacity: 1;
 }
 .about-us__card-clothing {
   background-image: url(/assets/img/shop_photos/jacket2.png);
@@ -206,6 +230,9 @@ figure {
   background-image: url(/assets/img/overlay_textures/Dirt_Textures/PNG/SG-Dirt-Texture-02i.png);
   filter: drop-shadow(3px 4px 8px rgba(0, 0, 0, 0.25));
   padding: 7.6rem 11rem;
+}
+.our-location__card a {
+  cursor: pointer;
 }
 .our-location__heading-box {
   margin: 4.2rem auto;
