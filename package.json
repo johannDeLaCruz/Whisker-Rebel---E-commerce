@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --watch app.js"
+    "start": "node --watch app.js",
+    "start:dev": "nodemon --verbose --ext html,css,js,ejs -L app.js"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +15,7 @@
     "@fortawesome/fontawesome-free": "^6.4.0",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
+    "mongoose": "^7.1.1",
     "swiper": "^9.2.0"
   }
 }

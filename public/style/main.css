@@ -133,7 +133,6 @@ strong {
 }
 [class*="about-us__card"] figcaption:hover {
   height: 32rem;
-  transition-duration: 0.7s;
   background-color: var(--color-dark-50a);
 }
 [class*="about-us__card"] h2 {

@@ -5,14 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Whisker Rebel | Men's Wear |</title>
-     <!-- FAVICON -->
-     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon_package/apple-touch-icon.png" />
-     <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon_package/favicon-32x32.png" />
-     <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon_package/favicon-16x16.png" />
-     <link rel="manifest" href="/assets/img/favicon_package/site.webmanifest" />
-     <link rel="mask-icon" href="/assets/img/favicon_package/safari-pinned-tab.svg" color="#5bbad5" />
-     <meta name="msapplication-TileColor" content="#da532c" />
-     <meta name="theme-color" content="#ffffff" />
+    <!-- FAVICON -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/img/favicon_package/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/img/favicon_package/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/img/favicon_package/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/assets/img/favicon_package/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/assets/img/favicon_package/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
 
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="style\reset.css" />
@@ -22,7 +40,7 @@
       href="/@fortawesome/fontawesome-free/css/all.min.css"
     />
     <link rel="stylesheet" href="style\common.css" />
-    <link rel="stylesheet" href="style\mens-clothing.css" />
+    <link rel="stylesheet" href="style\products_list.css" />
 
     <!-- SCRIPTS -->
     <script src="\app\main.js" defer></script>
@@ -42,114 +60,23 @@
     </section>
     <main>
       <section class="product wrapper default-grid">
+        <% products.forEach((product) => { %>
         <div class="product__card">
-          <a href=""
+          <a href="/product"
             ><img
               src="\assets\img\model_products\mod32.png"
               alt="product"
               class="product__image"
           /></a>
           <div class="product__body">
-            <p class="product__text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui illum
-              hic deserunt sint asperiores quo delectus nihil.
-            </p>
+            <p class="product__text"><%= product.description %></p>
             <div class="product__tags">
-              <span class="product__price">74.55$</span>
+              <span class="product__price"><%= product.price %></span>
               <button class="product__add-cart-button">ADD TO CART</button>
             </div>
           </div>
         </div>
-        <div class="product__card">
-          <a href=""
-            ><img
-              src="\assets\img\model_products\mod33.png"
-              alt="product"
-              class="product__image"
-          /></a>
-          <div class="product__body">
-            <p class="product__text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui illum
-              hic deserunt sint asperiores quo delectus nihil.
-            </p>
-            <div class="product__tags">
-              <span class="product__price">74.55$</span>
-              <button class="product__add-cart-button">ADD TO CART</button>
-            </div>
-          </div>
-        </div>
-        <div class="product__card">
-          <a href=""
-            ><img
-              src="\assets\img\model_products\mod34.png"
-              alt="product"
-              class="product__image"
-          /></a>
-          <div class="product__body">
-            <p class="product__text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui illum
-              hic deserunt sint asperiores quo delectus nihil.
-            </p>
-            <div class="product__tags">
-              <span class="product__price">74.55$</span>
-              <button class="product__add-cart-button">ADD TO CART</button>
-            </div>
-          </div>
-        </div>
-        <div class="product__card">
-          <a href=""
-            ><img
-              src="\assets\img\model_products\mod43.png"
-              alt="product"
-              class="product__image"
-          /></a>
-          <div class="product__body">
-            <p class="product__text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui illum
-              hic deserunt sint asperiores quo delectus nihil.
-            </p>
-            <div class="product__tags">
-              <span class="product__price">74.55$</span>
-              <button class="product__add-cart-button">ADD TO CART</button>
-            </div>
-          </div>
-        </div>
-        <div class="product__card">
-          <a href=""
-            ><img
-              src="\assets\img\model_products\mod44.png"
-              alt="product"
-              class="product__image"
-          /></a>
-          <div class="product__body">
-            <p class="product__text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui illum
-              hic deserunt sint asperiores quo delectus nihil.
-            </p>
-            <div class="product__tags">
-              <span class="product__price">74.55$</span>
-              <button class="product__add-cart-button">ADD TO CART</button>
-            </div>
-          </div>
-        </div>
-        <div class="product__card">
-          <a href=""
-            ><img
-              src="\assets\img\model_products\mod37.png"
-              alt="product"
-              class="product__image"
-          /></a>
-          <div class="product__body">
-            <p class="product__text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui illum
-              hic deserunt sint asperiores quo delectus nihil.
-            </p>
-            <div class="product__tags">
-              <span class="product__price">74.55$</span>
-              <button class="product__add-cart-button">ADD TO CART</button>
-            </div>
-          </div>
-        </div>
+        <% }); %>
       </section>
     </main>
     <section class="pagination fluid-wrapper">
@@ -161,6 +88,6 @@
         <a class="pagination__button">Next</a>
       </div>
     </section>
-   <%- include('footer.html') %>
+    <%- include('footer.html') %>
   </body>
 </html>
