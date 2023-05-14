@@ -19,6 +19,24 @@ app.get("/", (req, res) => {
 app.get("/contact", (req, res) => {
   res.render("contact");
 });
+// Products List Routing
+// app.get("/:shopName", (req, res) => {
+//   const shop = req.params.shopName.replace(/_/g, "");
+//   Product.find({ shop })
+//     .then((products) => {
+//       const formattedShopName = shop.charAt(0).toUpperCase() + shop.slice(1);
+//       res.render("products_list", {
+//         shopName: formattedShopName,
+//         products,
+//         layout: false,
+//       });
+//     })
+//     .catch((err) => {
+//       console.error(err);
+//       res.status(500).send("Error retrieving products");
+//     });
+// });
+
 app.get("/mens_clothing", (req, res) => {
   Product.find({ shop: "mensClothing" })
     .then((products) => {
@@ -50,11 +68,35 @@ app.get("/womens_clothing", (req, res) => {
 });
 
 app.get("/shoes", (req, res) => {
-  res.render("products_list", { shopName: "SHOES" });
+  Product.find({ shop: "shoes" })
+    .then((products) => {
+      res.render("products_list", {
+        shopName: "SHOES",
+        products,
+        layout: false,
+      });
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).send("Error retrieving products");
+    });
 });
+
 app.get("/apparel", (req, res) => {
-  res.render("products_list", { shopName: "APPAREL" });
+  Product.find({ shop: "apparel" })
+    .then((products) => {
+      res.render("products_list", {
+        shopName: "APPAREL",
+        products,
+        layout: false,
+      });
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).send("Error retrieving products");
+    });
 });
+
 app.get("/product", (req, res) => {
   res.render("/product_page");
 });

@@ -130,6 +130,7 @@ strong {
   overflow: hidden;
   transition: height 0.7s cubic-bezier(0.68, -0.5, 0.265, 1);
   transition-delay: 0.1s;
+  will-change: height;
 }
 [class*="about-us__card"] figcaption:hover {
   height: 32rem;

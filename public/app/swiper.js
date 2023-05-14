@@ -6,7 +6,7 @@ const swiper = new Swiper(".swiper", {
     speed: 1500,
     effect: "fade",
     autoplay: {
-      delay: 5000,
+      delay: 4000,
       disableOnInteraction: false,
     },
   
