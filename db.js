@@ -31,7 +31,6 @@ const Product = mongoose.model("Product", productSchema);
 // Create here the documents for the products
 
 
-module.exports = Product;
 // Save the products to the database
 // Product1.save();
 // Product2.save();
@@ -39,3 +38,29 @@ module.exports = Product;
 // Product4.save();
 // Product5.save();
 // Product6.save();
+
+// GET PRODUCTS FUNCTION
+// const getAllDocuments = async () => {
+//   try {
+//     const res = await Product.find({shop: "shoes"});
+//     console.log(res);
+//   } catch (err) {
+//     console.error(err);
+//   }
+// };
+// getAllDocuments();
+
+// UPDATE PRODUCTS FUNCTION
+// const updateDocuments = async () => {
+//   try {
+//     const randomNumber = Math.floor(Math.random()*11);
+//     const res = await Product.updateMany({},{$set: {stock: randomNumber }});
+//     console.log(res);
+//   }
+//   catch (err) {
+//     console.error(err);
+//   }
+// };
+// updateDocuments();
+
+module.exports = Product;

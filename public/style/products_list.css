@@ -55,6 +55,13 @@ select {
   background-image: url(/assets/img/overlay_textures/Dirt_Textures/PNG/SG-Dirt-Texture-02i.png);
   padding: 2.4rem;
 }
+.product__name {
+  text-transform: uppercase;
+}
+.product__text {
+  margin-top: 1.6rem;
+  /* height: 4ex; */
+}
 .product__price {
   display: inline;
   font-size: var(--fs-750);
@@ -72,18 +79,20 @@ select {
   font-weight: var(--fw-b);
   letter-spacing: 0.06em;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s, color 0.2s, border;
   text-transform: uppercase;
 }
 .product__add-cart-button:hover {
-  background-color: var(--color-dark-700);
-  transition: background-color 0.2s;
+  background-color: transparent;
+  color: var(--color-dark-hsl);
+  border: 0.4rem solid var(--color-dark-hsl);
+  
 }
 .product__tags {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 2.4rem;
+  margin-top: 1.6rem;
 }
 /* PAGINATION SECTION */
 .pagination {

@@ -98,8 +98,9 @@ app.get("/apparel", (req, res) => {
 });
 
 app.get("/product", (req, res) => {
-  res.render("/product_page");
+  Product.find({})
 });
+
 
 // SERVER LISTENING SETUP
 app.listen(port, () => {

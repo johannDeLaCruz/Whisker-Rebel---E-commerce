@@ -12,7 +12,6 @@ h2 {
   font-weight: var(--fw-sb);
   letter-spacing: 0.02em;
   text-transform: capitalize;
-  
 }
 h4 {
   font-size: var(--fs-500);
