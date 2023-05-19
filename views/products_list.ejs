@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Whisker Rebel | Men's Wear |</title>
+    <title>Whisker Rebel | <%= shopName %> |</title>
     <!-- FAVICON -->
     <link
       rel="apple-touch-icon"
@@ -46,7 +46,7 @@
     <script src="\app\main.js" defer></script>
   </head>
   <body>
-    <%- include('header.html') %>
+    <%- include('header.ejs') %>
     <section class="fluid-wrapper subheader">
       <div class="subheader__wrapper wrapper">
         <select name="" id="" class="subheader__sort-menu">
@@ -62,10 +62,10 @@
       <section class="product wrapper default-grid">
         <% products.forEach((product) => { %>
         <div class="product__card">
-          <a href="/product"
+          <a href="/product/<%= product._id %>"
             ><img
-              src="\assets\img\model_products\mod32.png"
-              alt="product"
+              src="<%= product.coverImage %>"
+              alt="product_image"
               class="product__image"
           /></a>
           <div class="product__body">
@@ -89,6 +89,6 @@
         <a class="pagination__button">Next</a>
       </div>
     </section>
-    <%- include('footer.html') %>
+    <%- include('footer.ejs') %>
   </body>
 </html>

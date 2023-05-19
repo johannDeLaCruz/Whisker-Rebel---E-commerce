@@ -4,86 +4,69 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Whisker Rebel | Men's Wear |</title>
+    <title>Whisker Rebel | Product Details |</title>
     <!-- FAVICON -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/img/favicon_package/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/img/favicon_package/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/img/favicon_package/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/assets/img/favicon_package/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/assets/img/favicon_package/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
-
     <!-- STYLESHEETS -->
-    <link rel="stylesheet" href="style\reset.css" />
-    <link rel="stylesheet" href="style\variables.css" />
+    <link rel="stylesheet" href="\style\reset.css" />
+    <link rel="stylesheet" href="\style\variables.css" />
     <link
       rel="stylesheet"
-      href="node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+      href="\@fortawesome\fontawesome-free\css\all.min.css"
     />
-    <link rel="stylesheet" href="node_modules\swiper\swiper-bundle.min.css" />
-    <link rel="stylesheet" href="style\common.css" />
-    <link rel="stylesheet" href="style\product.css" />
-
+    <link rel="stylesheet" href="\swiper\swiper-bundle.min.css" />
+    <link rel="stylesheet" href="\style\common.css" />
+    <link rel="stylesheet" href="\style\product.css" />
     <!-- SCRIPTS -->
-    <script src="node_modules\swiper\swiper-bundle.min.js" defer></script>
-    <script src="src/app/swiper-product.js" defer></script>
-    <script src="src\app\main.js" defer></script>
+    <script src="\swiper\swiper-bundle.min.js" defer></script>
+    <script src="\app\swiper-product.js" defer></script>
+    <!-- <script src="\app\main.js" defer></script> -->
   </head>
   <body>
-    <header class="fluid-wrapper">
-      <nav class="navbar wrapper">
-        <a href="/index.html">
-          <img
-            class="navbar__logo"
-            src="src\assets\img\official_logo\logo_text.png"
-            alt="logo"
-          />
-        </a>
-        <ul class="navbar__main">
-          <li><a class="navbar__item" href="/index.html">HOME</a></li>
-          <li class="navbar__shop-menu">
-            <a class="navbar__item">SHOP</a
-            ><i
-              class="fas fa-sharp fa-regular fa-circle-chevron-down fa-1x navbar__chevron-icon"
-            ></i>
-            <ul id="shop-submenu" class="">
-              <li><a href="/mens_clothing.html">MEN'S CLOTHING</a></li>
-              <li><a href="/womens_clothing.html">WOMEN'S CLOTHING</a></li>
-              <li><a href="/shoes.html">SHOES</a></li>
-              <li><a href="/apparel.html">APPAREL</a></li>
-            </ul>
-          </li>
-          <li><a class="navbar__item" href="/about.html">ABOUT</a></li>
-          <li><a class="navbar__item" href="/contact.html">CONTACT</a></li>
-        </ul>
-        <button class="navbar__cart">CART</button>
-      </nav>
-    </header>
+    <%- include('header.ejs') %>
     <main>
       <article class="product-details wrapper">
         <div class="swiper mySwiper2">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <img src="/src/assets/img/model_products/mod41.png" />
+              <img src="<%= product.coverImage %>" />
             </div>
             <div class="swiper-slide">
-              <img src="/src/assets/img/products_details/jacket3.png" />
+              <img src="<%= product.coverImage %>" />
             </div>
           </div>
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
         </div>
         <div class="product-details__info">
-          <h1 class="product-details__heading">LOREM IPSUM DOLOR</h1>
-          <p class="product-details__text">
-            Lorem ipsum dolor est ameng squiter ex exilaratum est favia del
-            anima nostra dela savit est miquitav Lorem ipsum dolor est ameng
-            squiter ex exilaratum est favia del anima nostra dela savit est
-            iquitav Lorem ipsum dolor est ameng squiter
-          </p>
+          <h1 class="product-details__heading"><%= product.name %></h1>
+          <p class="product-details__text"><%= product.description %></p>
           <div>
-            <span class="product-details__price">$74.55</span>
+            <span class="product-details__price"><%= product.price %></span>
             <span class="product-details__color">COLOR:</span>
           </div>
           <div class="product-details__buttons">
@@ -93,64 +76,16 @@
           <div thumbsSlider="" class="swiper mySwiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <img src="/src/assets/img/model_products/mod41.png" />
+                <img src="<%= product.coverImage %>" />
               </div>
               <div class="swiper-slide">
-                <img src="/src/assets/img/products_details/jacket3.png" />
+                <img src="<%= product.coverImage %>" />
               </div>
             </div>
           </div>
         </div>
       </article>
     </main>
-    <footer class="footer fluid-wrapper">
-      <div class="footer__wrapper wrapper">
-        <ul class="footer__main">
-          <li class="footer__contact-us">
-            CONTACT US
-            <ul>
-              <li class="footer__phone">+1(310)899-4461</li>
-              <li class="footer__email">CONTACT@WHISKERREBEL.COM</li>
-            </ul>
-          </li>
-          <li class="footer__address">
-            ADDRESS
-            <ul>
-              <li class="footer__address-line">
-                5205 SW 99th Ave Jasper,<br />Florida(FL), 32052
-              </li>
-            </ul>
-          </li>
-          <li class="footer__social-links">
-            SOCIAL LINKS
-            <ul>
-              <li class="footer__instagram">
-                <a href=""
-                  ><i class="fas fa-brands fa-instagram"></i>Instagram</a
-                >
-              </li>
-              <li class="footer__facebook">
-                <a href=""><i class="fas fa-brands fa-facebook"></i>Facebook</a>
-              </li>
-              <li class="footer__discord">
-                <a href=""><i class="fas fa-brands fa-discord"></i>Discord</a>
-              </li>
-              <li class="footer__twitter">
-                <a href=""><i class="fas fa-brands fa-twitter"></i>Twitter</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-
-        <div class="footer__break-line"></div>
-        <small class="footer__copyright-text"
-          >©2023 Whisker Rebel Inc. All Right Reserved Under<br />Penal Code
-          101. of US.
-        </small>
-        <!-- <small class="footer__designer-text"
-        >humbly designed by J.De La Cruz
-      </small> -->
-      </div>
-    </footer>
+    <%- include('footer.ejs') %>
   </body>
 </html>

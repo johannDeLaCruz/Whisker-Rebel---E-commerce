@@ -1,6 +1,6 @@
 .product-details {
   background-color: var(--color-neutral-hsl);
-  /* background-image: url(/src/assets/img/overlay_textures/Dirt_Textures/PNG/SG-Dirt-Texture-01i.png); */
+  /* background-image: url(/assets/img/overlay_textures/Dirt_Textures/PNG/SG-Dirt-Texture-01i.png); */
   padding: 11rem;
   margin-block: 10.4rem;
   display: flex;
@@ -89,10 +89,11 @@ article button {
   font-weight: var(--fw-b);
   letter-spacing: 0.06em;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s, color 0.2s, border;
   text-transform: uppercase;
 }
 article button:hover {
-  background-color: var(--color-dark-700);
-  transition: background-color 0.2s;
+  background-color: transparent;
+  color: var(--color-dark-hsl);
+  border: 0.4rem solid var(--color-dark-hsl);
 }

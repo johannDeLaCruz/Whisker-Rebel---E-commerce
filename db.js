@@ -1,8 +1,9 @@
 const mongoose = require("mongoose");
 
 // Connect MongoDB at default port 27017.
-mongoose.connect("mongodb://127.0.0.1:27017/whisker_rebel_db", {
+mongoose.connect("mongodb+srv://johanndelacruz2023:johanndelacruz2023@cluster0.p5gnwka.mongodb.net/whisker_rebel_db", {
   useNewUrlParser: true,
+  useUnifiedTopology: true
 });
 
 // Create schema for products
@@ -21,15 +22,15 @@ const productSchema = new mongoose.Schema({
   description: { type: String, required: true },
   price: { type: Number, required: true },
   shop: { type: String, required: true },
-  coverImage: { type: Buffer },
-  detailsImage: { type: Buffer },
+  coverImage: { type: String },
+  detailsImage: { type: String },
+  stockQuantity: {type: Number, required: true}
 });
 
 // Create model for the document based on the schema
 const Product = mongoose.model("Product", productSchema);
 
 // Create here the documents for the products
-
 
 // Save the products to the database
 // Product1.save();
@@ -42,7 +43,7 @@ const Product = mongoose.model("Product", productSchema);
 // GET PRODUCTS FUNCTION
 // const getAllDocuments = async () => {
 //   try {
-//     const res = await Product.find({shop: "shoes"});
+//     const res = await Product.find({shop: "womensClothing"});
 //     console.log(res);
 //   } catch (err) {
 //     console.error(err);
@@ -54,10 +55,21 @@ const Product = mongoose.model("Product", productSchema);
 // const updateDocuments = async () => {
 //   try {
 //     const randomNumber = Math.floor(Math.random()*11);
-//     const res = await Product.updateMany({},{$set: {stock: randomNumber }});
+//     const res = await Product.updateMany({},{$set: {stockQuantity: randomNumber }});
 //     console.log(res);
 //   }
 //   catch (err) {
+//     console.error(err);
+//   }
+// };
+// updateDocuments();
+
+// UPDATE PRODUCTS FUNCTION
+// const updateDocuments = async () => {
+//   try {
+//     const res = await Product.updateMany({}, { $set: { coverImage: "", detailsImage: "" } });
+//     console.log(res);
+//   } catch (err) {
 //     console.error(err);
 //   }
 // };

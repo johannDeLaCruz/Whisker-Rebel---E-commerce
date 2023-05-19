@@ -14,3 +14,4 @@ const swiper = new Swiper(".mySwiper", {
       swiper: swiper,
     },
   });
+

@@ -7,7 +7,6 @@ const app = express();
 
 // Set the view engine to EJS
 app.set("view engine", "ejs");
-
 // Serve static files
 app.use(express.static(__dirname + "/public"));
 app.use(express.static(__dirname + "/node_modules"));
@@ -97,10 +96,16 @@ app.get("/apparel", (req, res) => {
     });
 });
 
-app.get("/product", (req, res) => {
-  Product.find({})
+app.get("/product/:productId", (req, res) => {
+  Product.findOne({ _id: req.params.productId })
+    .then((product) => {
+      res.render("product_page", { product, layout: false });
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).send("Error retrieving product");
+    });
 });
-
 
 // SERVER LISTENING SETUP
 app.listen(port, () => {
