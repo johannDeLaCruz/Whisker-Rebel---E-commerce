@@ -1,6 +1,6 @@
 .product-details {
   background-color: var(--color-neutral-hsl);
-  /* background-image: url(/assets/img/overlay_textures/Dirt_Textures/PNG/SG-Dirt-Texture-01i.png); */
+  background-image: url(/assets/img/overlay_textures/Dirt_Textures/PNG/SG-Dirt-Texture-01i.png);
   padding: 11rem;
   margin-block: 10.4rem;
   display: flex;
