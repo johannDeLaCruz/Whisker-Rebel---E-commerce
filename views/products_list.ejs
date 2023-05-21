@@ -49,13 +49,17 @@
     <%- include('header.ejs') %>
     <section class="fluid-wrapper subheader">
       <div class="subheader__wrapper wrapper">
-        <select name="" id="" class="subheader__sort-menu">
-          <option value="">SORT BY</option>
-          <option value="">BY PRICE</option>
-          <option value="">BY POPULARITY</option>
-        </select>
+        <div class="subheader__sort-menu-wrapper">
+          <select name="" id="" class="subheader__sort-menu">
+            <option value="" disabled selected>SORT BY</option>
+            <option value="price">PRICE</option>
+            <option value="popularity">POPULARITY</option>
+          </select>
+          <i
+            class="fas fa-sharp fa-solid fa-sort-down subheader__custom-arrow"
+          ></i>
+        </div>
         <h1 class="subheader__header"><%= shopName %></h1>
-        <select name="" id="" class="subheadMEer__sort-menu"></select>
       </div>
     </section>
     <main>
