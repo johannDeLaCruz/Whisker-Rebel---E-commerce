@@ -1,0 +1,105 @@
+.contact {
+  background-color: var(--color-neutral-hsl);
+  background-image: url(/assets/img/overlay_textures/Dirt_Textures/PNG/SG-Dirt-Texture-01i.png);
+  padding: 12rem;
+  margin-block: 10.4rem;
+  display: flex;
+  justify-content: center;
+  filter: drop-shadow(3px 4px 8px rgba(0, 0, 0, 0.25));
+}
+h1 {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-eb);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+}
+h1::after {
+  content: "";
+  height: 0.5rem;
+  width: 35%;
+  background-color: var(--color-dark-hsl);
+  display: block;
+  margin-inline: auto;
+}
+form {
+  margin: 5.8rem 4rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.4rem;
+  width: 51.2rem;
+}
+form > div {
+  display: flex;
+  height: 4.8rem;
+}
+input:focus,
+textarea:focus {
+  border: 0.5rem solid var(--color-dark-hsl);
+}
+form div:last-child {
+  flex-direction: column;
+  height: auto;
+}
+form div:last-child > label {
+  width: 100%;
+  justify-content: center;
+  height: 4.8rem;
+}
+input {
+  display: inline-block;
+  width: 70%;
+  border: 0.4rem solid var(--color-dark-hsl);
+  font-size: var(--fs-400);
+  font-weight: var(--fw-sb);
+  letter-spacing: 0.02em;
+  padding: 0.8rem;
+  text-transform: capitalize;
+}
+input:focus {
+  outline: none;
+}
+label {
+  display: flex;
+  width: 30%;
+  font-size: var(--fs-400);
+  font-weight: var(--fw-sb);
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--color-neutral-hsl);
+  background-color: var(--color-dark-hsl);
+  justify-content: center;
+  align-items: center;
+}
+textarea {
+  width: 100%;
+  border: 0.4rem solid var(--color-dark-hsl);
+  padding: 0.8rem;
+  font-size: var(--fs-400);
+  font-weight: var(--fw-sb);
+  letter-spacing: 0.02em;
+  color: var(--color-dark-hsl);
+  height: 300%;
+  box-sizing: border-box;
+}
+textarea:focus {
+  outline: none;
+}
+.contact__button {
+  display: block;
+  width: 19.2rem;
+  height: 4.8rem;
+  color: var(--color-neutral-hsl);
+  background-color: var(--color-dark-hsl);
+  margin-inline: auto;
+  font-size: var(--fs-400);
+  font-weight: var(--fw-sb);
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  border: 0.4rem solid var(--color-dark-hsl);
+  cursor: pointer;
+}
+.contact__button:hover {
+  color: var(--color-dark-hsl);
+  background-color: var(--color-neutral-hsl);
+}
