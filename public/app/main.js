@@ -21,14 +21,11 @@ const cartButton = document.querySelector(".navbar__cart");
 const cartMenu = document.querySelector(".cart-dropdown");
 
 cartButton.addEventListener("click", () => {
-  cartMenu.classList.toggle("visible");
+  cartMenu.classList.toggle("cart-dropdown--visible");
 });
 document.addEventListener("click", (event) => {
-  if (
-    !cartButton.contains(event.target) &&
-    !cartMenu.contains(event.target)
-  ) {
-    cartMenu.classList.remove("visible");
+  if (!cartMenu.contains(event.target) && event.target !== cartButton) {
+    cartMenu.classList.remove("cart-dropdown--visible");
   }
 });
 

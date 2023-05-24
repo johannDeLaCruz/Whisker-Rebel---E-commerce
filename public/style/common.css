@@ -5,7 +5,7 @@ body {
 }
 header {
   position: relative;
-  z-index: 9999;
+  z-index: 10;
 }
 h2 {
   font-size: var(--fs-400);
@@ -134,11 +134,11 @@ p[class*="__text"] {
   font-family: var(--ff-primary);
   color: var(--color-neutral-hsl);
   font-size: var(--fs-400);
-  transition: background-color 0.3s, color 0.3s;
   cursor: pointer;
   position: relative;
 }
 .navbar__cart:hover {
+  transition: background-color 0.3s, color 0.3s;
   background-color: var(--color-neutral-hsl);
   color: var(--color-dark-hsl);
 }
@@ -171,7 +171,12 @@ p[class*="__text"] {
   flex-direction: column;
   row-gap: 7.2rem;
   align-items: center;
-  display: none;
+  transform: translateY(-120%);
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+.cart-dropdown--visible {
+  transform: translateY(0) !important;
 }
 .cart-dropdown span,
 .cart-dropdown a {
@@ -220,10 +225,11 @@ p[class*="__text"] {
   color: var(--color-neutral-hsl);
   font-size: var(--fs-400);
   text-transform: uppercase;
-  transition: background-color 0.3s, color 0.3s;
   cursor: pointer;
 }
 .cart-dropdown__button:hover {
+  transition: background-color 0.3s, color 0.3s;
+
   background-color: transparent;
   color: var(--color-dark-hsl);
 }
