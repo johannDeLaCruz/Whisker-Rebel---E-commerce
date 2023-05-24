@@ -1,44 +1,51 @@
 <header class="fluid-wrapper">
-    <nav class="navbar wrapper">
-      <a href="/">
-        <img
-          class="navbar__logo"
-          src="\assets\img\official_logo\logo_text.png"
-          alt="logo"
-        />
-      </a>
-      <ul class="navbar__main">
-        <li><a class="navbar__item" href="/">HOME</a></li>
-        <li class="navbar__shop-menu">
-          <a class="navbar__item">SHOP</a
-          ><i
-            class="fas fa-sharp fa-regular fa-circle-chevron-down fa-1x navbar__chevron-icon"
-          ></i>
-          <ul id="shop-submenu">
-            <li>
-              <a href="/mens_clothing" class="navbar__submenu-item"
-                >MEN'S CLOTHING</a
-              >
-            </li>
-            <li>
-              <a href="/womens_clothing" class="navbar__submenu-item"
-                >WOMEN'S CLOTHING</a
-              >
-            </li>
-            <li>
-              <a href="/shoes" class="navbar__submenu-item">SHOES</a>
-            </li>
-            <li>
-              <a href="/apparel" class="navbar__submenu-item">APPAREL</a>
-            </li>
-          </ul>
-        </li>
-        <li><a class="navbar__item" href="/about">ABOUT</a></li>
-        <li><a class="navbar__item" href="/contact">CONTACT</a></li>
+  <nav class="navbar wrapper">
+    <a href="/">
+      <img
+        class="navbar__logo"
+        src="\assets\img\official_logo\logo_text.png"
+        alt="logo"
+      />
+    </a>
+    <ul class="navbar__main">
+      <li><a class="navbar__item" href="/">HOME</a></li>
+      <li class="navbar__shop-menu">
+        <a class="navbar__item">SHOP</a
+        ><i
+          class="fas fa-sharp fa-regular fa-circle-chevron-down fa-1x navbar__chevron-icon"
+        ></i>
+        <ul id="shop-submenu">
+          <li>
+            <a href="/mens_clothing" class="navbar__submenu-item"
+              >MEN'S CLOTHING</a
+            >
+          </li>
+          <li>
+            <a href="/womens_clothing" class="navbar__submenu-item"
+              >WOMEN'S CLOTHING</a
+            >
+          </li>
+          <li>
+            <a href="/shoes" class="navbar__submenu-item">SHOES</a>
+          </li>
+          <li>
+            <a href="/apparel" class="navbar__submenu-item">APPAREL</a>
+          </li>
+        </ul>
+      </li>
+      <li><a class="navbar__item" href="/about">ABOUT</a></li>
+      <li><a class="navbar__item" href="/contact">CONTACT</a></li>
+    </ul>
+    <button class="navbar__cart">CART</button>
+    <div class="cart-dropdown">
+      <div class="cart-dropdown__heading-box"><h2>YOUR CART</h2></div>
+      <ul>
+        <li><span>1x</span><a href="">Product full name</a><button><i class="fas fa-sharp fa-regular fa-trash-can"></i></button></li>
+        <!-- <li><span>1x</span><a href="">Product full name</a><button><i class="fas fa-sharp fa-regular fa-trash-can"></i></button></li> -->
+        <!-- <li><span>1x</span><a href="">Product full name</a><button><i class="fas fa-sharp fa-regular fa-trash-can"></i></button></li> -->
+        
       </ul>
-      <button class="navbar__cart">
-        CART
-        <div id="cart-dropdown"></div>
-      </button>
-    </nav>
-  </header>
+      <button class="cart-dropdown__button">GO TO CART</button>
+    </div>
+  </nav>
+</header>

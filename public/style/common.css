@@ -56,6 +56,7 @@ p[class*="__text"] {
 /* NAVBAR SECTION */
 .navbar {
   display: flex;
+  position: relative;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -88,7 +89,7 @@ p[class*="__text"] {
   font-family: var(--ff-primary);
   position: absolute;
   top: 8rem;
-  background-color: var(--color-dark-50a);
+  background-color: var(--color-dark-70a);
   color: var(--color-neutral-hsl);
   display: none;
   flex-direction: column;
@@ -98,12 +99,6 @@ p[class*="__text"] {
   transform: translate(-2.6rem);
   padding: 2.4rem;
 }
-#cart-dropdown {
-  position: absolute;
-  top: 8rem;
-  padding: 2.4rem;
-}
-
 .visible {
   display: flex !important;
 }
@@ -162,6 +157,77 @@ p[class*="__text"] {
   font-size: var(--fs-300);
   font-weight: var(--fw-b);
 }
+/* CART DROPDOWN SECTION */
+.cart-dropdown {
+  width: 57.6rem;
+  padding: 7.2rem 5.6rem;
+  background-color: var(--color-dark-70a);
+  backdrop-filter: blur(10px);
+  position: absolute;
+  top: 8rem;
+  right: 4.8rem;
+  outline: 0.4rem solid var(--color-dark-hsl);
+  display: flex;
+  flex-direction: column;
+  row-gap: 7.2rem;
+  align-items: center;
+  display: none;
+}
+.cart-dropdown span,
+.cart-dropdown a {
+  padding-inline: 1.6rem;
+  font-size: var(--fs-450);
+  font-weight: var(--fw-r);
+  letter-spacing: 0.03em;
+  color: var(--color-neutral-hsl);
+}
+.cart-dropdown a {
+  display: inline-block;
+  width: 30ch;
+}
+.cart-dropdown a:hover {
+  color: var(--color-neutral-50a);
+}
+.cart-dropdown a::after {
+  content: "";
+  width: 100%;
+  height: 0.1rem;
+  background-color: var(--color-neutral-hsl);
+  display: block;
+}
+.cart-dropdown ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.6rem;
+}
+.cart-dropdown__heading-box {
+  color: var(--color-neutral-hsl);
+  border-color: var(--color-neutral-hsl);
+}
+.cart-dropdown i {
+  color: var(--color-accent-hsl);
+}
+.cart-dropdown ul button {
+  appearance: none;
+  background-color: transparent;
+}
+.cart-dropdown__button {
+  width: 14rem;
+  height: 4.5rem;
+  border: 0.3rem solid var(--color-dark-hsl);
+  background-color: var(--color-dark-hsl);
+  font-family: var(--ff-primary);
+  color: var(--color-neutral-hsl);
+  font-size: var(--fs-400);
+  text-transform: uppercase;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+}
+.cart-dropdown__button:hover {
+  background-color: transparent;
+  color: var(--color-dark-hsl);
+}
+
 /* FOOTER SECTION */
 .footer {
   color: var(--color-neutral-hsl);

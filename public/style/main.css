@@ -30,7 +30,7 @@ strong {
   line-height: 1em;
 }
 .black-button {
-  width: 11rem;
+  width: 14rem;
   height: 4.5rem;
   border: 0.3rem solid var(--color-dark-hsl);
   background-color: var(--color-dark-hsl);

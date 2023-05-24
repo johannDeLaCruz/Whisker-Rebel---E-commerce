@@ -16,6 +16,22 @@ document.addEventListener("click", (event) => {
   }
 });
 
+// CART DROPDOWN MENU
+const cartButton = document.querySelector(".navbar__cart");
+const cartMenu = document.querySelector(".cart-dropdown");
+
+cartButton.addEventListener("click", () => {
+  cartMenu.classList.toggle("visible");
+});
+document.addEventListener("click", (event) => {
+  if (
+    !cartButton.contains(event.target) &&
+    !cartMenu.contains(event.target)
+  ) {
+    cartMenu.classList.remove("visible");
+  }
+});
+
 // SORT BY Dropdown Menu
 
 // function resizeSelect() {
@@ -35,4 +51,3 @@ document.addEventListener("click", (event) => {
 
 //   selectElement.style.width = optionWidth + "rem";
 // }
-
