@@ -17,7 +17,7 @@ h1 {
 h1::after {
   content: "";
   height: 0.5rem;
-  width: 35%;
+  width: 28%;
   background-color: var(--color-dark-hsl);
   display: block;
   margin-inline: auto;

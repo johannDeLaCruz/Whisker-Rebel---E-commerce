@@ -43,6 +43,10 @@
     <link rel="stylesheet" href="style\products_list.css" />
 
     <!-- SCRIPTS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js"
+      defer
+    ></script>
     <script src="\app\main.js" defer></script>
   </head>
   <body>
@@ -66,13 +70,15 @@
       <section class="product wrapper default-grid">
         <% products.forEach((product) => { %>
         <div class="product__card">
-          <a href="/product/<%= product._id %>"
-            ><img
-              src="<%= product.coverImage %>"
-              alt="product_image"
-              class="product__image"
-              loading="lazy"
-          /></a>
+          <div class="product__image-container">
+            <a href="/product/<%= product._id %>"
+              ><img
+                data-src="<%= product.coverImage %>"
+                src="\assets\img\placeholder\placeholder1.png"
+                alt="product_image"
+                class="product__image lazy"
+            /></a>
+          </div>
           <div class="product__body">
             <h2 class="product__name"><%= product.name %></h2>
             <p class="product__text"><%= product.description %></p>

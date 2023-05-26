@@ -181,7 +181,7 @@ p[class*="__text"] {
 .cart-dropdown span,
 .cart-dropdown a {
   padding-inline: 1.6rem;
-  font-size: var(--fs-450);
+  font-size: var(--fs-400);
   font-weight: var(--fw-r);
   letter-spacing: 0.03em;
   color: var(--color-neutral-hsl);
@@ -211,15 +211,18 @@ p[class*="__text"] {
 }
 .cart-dropdown i {
   color: var(--color-accent-hsl);
+  font-size: var(--fs-500);
 }
 .cart-dropdown ul button {
-  appearance: none;
-  background-color: transparent;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
 }
 .cart-dropdown__button {
   width: 14rem;
   height: 4.5rem;
-  border: 0.3rem solid var(--color-dark-hsl);
+  border: 0.3rem solid var(--color-neutral-hsl);
   background-color: var(--color-dark-hsl);
   font-family: var(--ff-primary);
   color: var(--color-neutral-hsl);
@@ -229,8 +232,7 @@ p[class*="__text"] {
 }
 .cart-dropdown__button:hover {
   transition: background-color 0.3s, color 0.3s;
-
-  background-color: transparent;
+  background-color: var(--color-neutral-hsl);
   color: var(--color-dark-hsl);
 }
 
