@@ -13,14 +13,12 @@
   font-size: var(--fs-500);
   text-transform: uppercase;
   font-weight: var(--fw-m);
-  /* color: var(--color-dark-hsl); */
   line-height: 1em;
   letter-spacing: 0.02em;
 }
 .hero__subtitle {
   font-size: var(--fs-300);
   font-weight: var(--fw-sb);
-  /* color: var(--color-neutral-hsl); */
   margin-block: 5rem 2.4rem;
   letter-spacing: 0.08em;
 }
@@ -49,7 +47,7 @@ strong {
 /* SWIPER MAIN SECTION */
 .swiper {
   position: relative;
-  z-index: -1;
+  z-index: 0;
 }
 .swiper-wrapper {
   width: 100%;

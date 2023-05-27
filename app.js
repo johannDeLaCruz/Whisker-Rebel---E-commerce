@@ -18,24 +18,6 @@ app.get("/", (req, res) => {
 app.get("/contact", (req, res) => {
   res.render("contact");
 });
-// Products List Routing
-// app.get("/:shopName", (req, res) => {
-//   const shop = req.params.shopName.replace(/_/g, "");
-//   Product.find({ shop })
-//     .then((products) => {
-//       const formattedShopName = shop.charAt(0).toUpperCase() + shop.slice(1);
-//       res.render("products_list", {
-//         shopName: formattedShopName,
-//         products,
-//         layout: false,
-//       });
-//     })
-//     .catch((err) => {
-//       console.error(err);
-//       res.status(500).send("Error retrieving products");
-//     });
-// });
-
 app.get("/mens_clothing", (req, res) => {
   Product.find({ shop: "mensClothing" })
     .then((products) => {
