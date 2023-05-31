@@ -15,6 +15,7 @@ app.use(express.static(__dirname + "/node_modules"));
 app.get("/", (req, res) => {
   res.render("index");
 });
+
 app.get("/contact", (req, res) => {
   res.render("contact");
 });

@@ -33,12 +33,6 @@ var lazyLoadInstance = new LazyLoad({
   // Your custom settings go here
 });
 
-
-
-// ABOUT US LINK SCROLLDOWN
-const aboutUsButton = document.querySelector("")
-
-
 // SORT BY Dropdown Menu
 
 // function resizeSelect() {

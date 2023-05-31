@@ -262,6 +262,9 @@ p[class*="__text"] {
   margin-bottom: 1.4rem;
   letter-spacing: 0.04em;
 }
+.footer__main > li li a:hover {
+  color: var(--color-neutral-50a);
+}
 .footer__social-links i::before {
   display: inline-block;
   color: var(--color-neutral-hsl);
@@ -270,7 +273,7 @@ p[class*="__text"] {
 }
 .footer__break-line {
   max-width: 132rem;
-  height: 0.5rem;
+  height: 0.4rem;
   background-color: var(--color-neutral-hsl);
   border-radius: 2rem;
   margin-block: 6.4rem 2.4rem;
