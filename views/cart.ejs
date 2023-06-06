@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Whisker Rebel | My Cart |</title>
+    <!-- FAVICON -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/img/favicon_package/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/img/favicon_package/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/img/favicon_package/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/assets/img/favicon_package/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/assets/img/favicon_package/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="style\reset.css" />
+    <link rel="stylesheet" href="style\variables.css" />
+    <link
+      rel="stylesheet"
+      href="/@fortawesome/fontawesome-free/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style\common.css" />
+    <link rel="stylesheet" href="style\cart.css" />
+
+    <!-- SCRIPTS -->
+    <!-- <script
+      src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js"
+      defer
+    ></script> -->
+    <script src="\app\main.js" defer></script>
+  </head>
+  <body>
+    <%- include('header.ejs') %>
+    <section class="fluid-wrapper subheader">
+      <div class="subheader__wrapper wrapper">
+        <h1 class="subheader__header">MY CART</h1>
+      </div>
+    </section>
+    <section class="cart wrapper default-grid">
+      <% if (cartItems.length === 0) { %>
+      <div class="cart__products-section"><h2>Your cart is empty!</h2></div>
+      <% } else { %> <% cartItems.forEach(item => { %>
+
+      <div class="cart__products-section">
+        <img
+          src="<%= item.coverImage %>"
+          alt="<%= item.name %>"
+          class="cart__product-photo"
+        />
+        <span></span>
+        <h2 class="cart__product-name"><%= item.name%></h2>
+        <span class="cart__product-price">$<%= item.price %></span>
+        <form action="/remove-from-cart/<%= item._id %>" method="POST">
+          <button type="submit" class="cart__trashcan"><i></i></button>
+        </form>
+      </div>
+      <% }) %> <% } %>
+      <div class="cart__cost-section">
+        <ul class="cart__costs-list">
+          <li>Shipping Cost<span>$</span></li>
+          <li>Discount<span>$</span></li>
+          <li>Taxes<span>$</span></li>
+        </ul>
+        <div class="cart__estimated-total">
+          <h3>ESTIMATED TOTAL:</h3>
+          <span>$</span>
+        </div>
+        <button class="cart__checkout-button black-button"></button>
+      </div>
+    </section>
+
+    <%- include('footer.ejs') %>
+  </body>
+</html>

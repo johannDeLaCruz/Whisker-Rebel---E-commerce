@@ -33,19 +33,31 @@
           </li>
         </ul>
       </li>
-      <li><a id="about-usButton" class="navbar__item" href="/#about-us">ABOUT</a></li>
+      <li>
+        <a id="about-usButton" class="navbar__item" href="/#about-us">ABOUT</a>
+      </li>
       <li><a class="navbar__item" href="/contact">CONTACT</a></li>
     </ul>
     <button class="navbar__cart">CART</button>
     <div class="cart-dropdown">
       <div class="cart-dropdown__heading-box"><h2>YOUR CART</h2></div>
       <ul>
-        <li><span>1x</span><a href="">Product full name</a><button><i class="fas fa-sharp fa-regular fa-trash-can"></i></button></li>
-        <!-- <li><span>1x</span><a href="">Product full name</a><button><i class="fas fa-sharp fa-regular fa-trash-can"></i></button></li> -->
-        <!-- <li><span>1x</span><a href="">Product full name</a><button><i class="fas fa-sharp fa-regular fa-trash-can"></i></button></li> -->
-        
+        <li>
+          <span>1x</span><a href=""></a>
+          <form action="/cart/remove" method="post">
+            <input
+              type="hidden"
+              name="productId"
+              value=""
+            />
+            <input type="hidden" name="userId" value="" />
+            <button type="submit">
+              <i class="fas fa-sharp fa-regular fa-trash-can"></i>
+            </button>
+          </form>
+        </li>
       </ul>
-      <button class="cart-dropdown__button">GO TO CART</button>
+      <button href="/cart" class="cart-dropdown__button">GO TO CART</button>
     </div>
   </nav>
 </header>

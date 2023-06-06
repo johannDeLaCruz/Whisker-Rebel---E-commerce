@@ -84,7 +84,16 @@
             <p class="product__text"><%= product.description %></p>
             <div class="product__tags">
               <span class="product__price"><%= product.price %>$</span>
-              <button class="product__add-cart-button">ADD TO CART</button>
+              <form action="/add-to-cart/<%= product._id %>" method="post">
+                <input
+                  type="hidden"
+                  name="productId"
+                  value="<%= product._id %>"
+                />
+                <button type="submit" class="product__add-cart-button">
+                  ADD TO CART
+                </button>
+              </form>
             </div>
           </div>
         </div>

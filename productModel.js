@@ -1,10 +1,13 @@
 const mongoose = require("mongoose");
 
 // Connect MongoDB at default port 27017.
-mongoose.connect("mongodb+srv://johanndelacruz2023:johanndelacruz2023@cluster0.p5gnwka.mongodb.net/whisker_rebel_db", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
+mongoose.connect(
+  "mongodb+srv://johanndelacruz2023:johanndelacruz2023@cluster0.p5gnwka.mongodb.net/whisker_rebel_db",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
+);
 
 // Create schema for products
 const productSchema = new mongoose.Schema({
@@ -24,13 +27,13 @@ const productSchema = new mongoose.Schema({
   shop: { type: String, required: true },
   coverImage: { type: String },
   detailsImage: { type: String },
-  stockQuantity: {type: Number, required: true}
+  stockQuantity: { type: Number, required: true },
 });
 
 // Create model for the document based on the schema
 const Product = mongoose.model("Product", productSchema);
 
-// Create here the documents for the products
+
 
 // Save the products to the database
 // Product1.save();
@@ -54,19 +57,6 @@ const Product = mongoose.model("Product", productSchema);
 // UPDATE PRODUCTS FUNCTION
 // const updateDocuments = async () => {
 //   try {
-//     const randomNumber = Math.floor(Math.random()*11);
-//     const res = await Product.updateMany({},{$set: {stockQuantity: randomNumber }});
-//     console.log(res);
-//   }
-//   catch (err) {
-//     console.error(err);
-//   }
-// };
-// updateDocuments();
-
-// UPDATE PRODUCTS FUNCTION
-// const updateDocuments = async () => {
-//   try {
 //     const res = await Product.updateMany({}, { $set: { coverImage: "", detailsImage: "" } });
 //     console.log(res);
 //   } catch (err) {
@@ -76,3 +66,4 @@ const Product = mongoose.model("Product", productSchema);
 // updateDocuments();
 
 module.exports = Product;
+

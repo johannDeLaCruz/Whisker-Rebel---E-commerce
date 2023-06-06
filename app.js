@@ -1,7 +1,8 @@
 // Requiring Modules
 const express = require("express");
 const ejs = require("ejs");
-const Product = require("./db.js");
+const Product = require("./productModel.js");
+const User = require("./userModel.js")
 const port = 3000;
 const app = express();
 
@@ -78,7 +79,7 @@ app.get("/apparel", (req, res) => {
       res.status(500).send("Error retrieving products");
     });
 });
-
+// Product Details Page routing
 app.get("/product/:productId", (req, res) => {
   Product.findOne({ _id: req.params.productId })
     .then((product) => {
@@ -88,6 +89,58 @@ app.get("/product/:productId", (req, res) => {
       console.error(err);
       res.status(500).send("Error retrieving product");
     });
+});
+// CART page routing
+app.get("/cart", async (req, res) => {
+  try {
+    const user = await User.findOne({ username: "default" });
+    res.render("cart", { cartItems: user.cart, layout: false });
+  } catch (err) {
+    console.error("Error fetching user cart:", err);
+    res.status(500).send("Internal Server Error");
+  }
+});
+
+// Add to CART logic
+app.post("/add-to-cart/:productId", async (req, res) => {
+  const { productId } = req.params;
+  try {
+    const user = await User.findOne({ username: "default" });
+    const product = await Product.findById(productId);
+
+    if (user && product) {
+      user.cart.push(product);
+      await user.save();
+      res.redirect("/cart");
+    } else {
+      res.status(404).send("Product or user not found");
+    }
+  } catch (err) {
+    console.error("Error adding to cart:", err);
+    res.status(500).send("Internal Server Error");
+  }
+});
+
+// Remove from CART logic
+app.post("/remove-from-cart/:productId", async (req, res) => {
+  const { productId } = req.params;
+  try {
+    const user = await User.findOne({ username: "default" });
+    const productIndex = user.cart.findIndex(
+      (item) => item._id.toString() === productId
+    );
+
+    if (user && productIndex !== -1) {
+      user.cart.splice(productIndex, 1);
+      await user.save();
+      res.redirect("/cart");
+    } else {
+      res.status(404).send("Product or user not found");
+    }
+  } catch (err) {
+    console.error("Error removing from cart:", err);
+    res.status(500).send("Internal Server Error");
+  }
 });
 
 // SERVER LISTENING SETUP
