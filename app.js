@@ -2,15 +2,30 @@
 const express = require("express");
 const ejs = require("ejs");
 const Product = require("./productModel.js");
-const User = require("./userModel.js")
+const User = require("./userModel.js");
 const port = 3000;
 const app = express();
 
 // Set the view engine to EJS
 app.set("view engine", "ejs");
+
 // Serve static files
 app.use(express.static(__dirname + "/public"));
 app.use(express.static(__dirname + "/node_modules"));
+
+// Define middleware for CART dropdown menu in header
+const addToCartMiddleware = async (req, res, next) => {
+  try {
+    const user = await User.findOne({ username: "default" });
+    res.locals.cartItems = user.cart;
+    res.locals.layout = false;
+    next();
+  } catch (error) {
+    next(error);
+  }
+};
+// Use the middleware for CART dropdown menu in header for all routes
+app.use(addToCartMiddleware);
 
 // Set pages routing
 app.get("/", (req, res) => {
@@ -93,8 +108,8 @@ app.get("/product/:productId", (req, res) => {
 // CART page routing
 app.get("/cart", async (req, res) => {
   try {
-    const user = await User.findOne({ username: "default" });
-    res.render("cart", { cartItems: user.cart, layout: false });
+    
+    res.render("cart");
   } catch (err) {
     console.error("Error fetching user cart:", err);
     res.status(500).send("Internal Server Error");

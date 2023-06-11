@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Whisker Rebel | My Cart |</title>
+    <title>Whisker Rebel | Your Cart |</title>
     <!-- FAVICON -->
     <link
       rel="apple-touch-icon"
@@ -53,39 +53,45 @@
     <%- include('header.ejs') %>
     <section class="fluid-wrapper subheader">
       <div class="subheader__wrapper wrapper">
-        <h1 class="subheader__header">MY CART</h1>
+        <h1 class="subheader__header">YOUR CART</h1>
       </div>
     </section>
     <section class="cart wrapper default-grid">
-      <% if (cartItems.length === 0) { %>
-      <div class="cart__products-section"><h2>Your cart is empty!</h2></div>
-      <% } else { %> <% cartItems.forEach(item => { %>
-
       <div class="cart__products-section">
-        <img
-          src="<%= item.coverImage %>"
-          alt="<%= item.name %>"
-          class="cart__product-photo"
-        />
-        <span></span>
-        <h2 class="cart__product-name"><%= item.name%></h2>
-        <span class="cart__product-price">$<%= item.price %></span>
-        <form action="/remove-from-cart/<%= item._id %>" method="POST">
-          <button type="submit" class="cart__trashcan"><i></i></button>
-        </form>
+        <% if (cartItems.length === 0) { %>
+        <h2>Your cart is empty!</h2>
+        <% } else { %> <% cartItems.forEach(item => { %>
+
+        <div class="cart__product">
+          <img
+            src="<%= item.coverImage %>"
+            alt="<%= item.name %>"
+            class="cart__product-photo"
+          />
+          <span>x1</span>
+          <div class="cart__product-name">
+            <h2 ><%= item.name%></h2>
+          </div>
+          <span class="cart__product-price">$<%= item.price %></span>
+          <form action="/remove-from-cart/<%= item._id %>" method="POST">
+            <button type="submit" class="cart__trashcan">
+              <i class="fas fa-sharp fa-regular fa-trash-can"></i>
+            </button>
+          </form>
+        </div>
+        <% }) %> <% } %>
       </div>
-      <% }) %> <% } %>
       <div class="cart__cost-section">
         <ul class="cart__costs-list">
-          <li>Shipping Cost<span>$</span></li>
-          <li>Discount<span>$</span></li>
-          <li>Taxes<span>$</span></li>
+          <li>Shipping Cost<span>$0</span></li>
+          <li>Discount<span>$0</span></li>
+          <li>Taxes<span>$0</span></li>
         </ul>
         <div class="cart__estimated-total">
           <h3>ESTIMATED TOTAL:</h3>
-          <span>$</span>
+          <span>$0</span>
         </div>
-        <button class="cart__checkout-button black-button"></button>
+        <button class="cart__checkout-button black-button">CHECKOUT</button>
       </div>
     </section>
 

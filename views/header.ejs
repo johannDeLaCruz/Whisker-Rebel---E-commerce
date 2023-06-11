@@ -41,21 +41,23 @@
     <button class="navbar__cart">CART</button>
     <div class="cart-dropdown">
       <div class="cart-dropdown__heading-box"><h2>YOUR CART</h2></div>
-      <ul>
-        <li>
-          <span>1x</span><a href=""></a>
-          <form action="/cart/remove" method="post">
-            <input
-              type="hidden"
-              name="productId"
-              value=""
-            />
-            <input type="hidden" name="userId" value="" />
-            <button type="submit">
+      <ul class="cart-dropdown__list">
+        <% if (cartItems.length === 0) { %>
+        <h2 class="cart-dropdown__product-name">Your cart is empty!</h2>
+        <% } else { %> <% cartItems.forEach(item => { %>
+        <li class="cart__product">
+          <span>x1</span>
+          <div class="cart-dropdown__product-name">
+            <h2><%= item.name%></h2>
+          </div>
+          <span class="cart__product-price">$<%= item.price %></span>
+          <form action="/remove-from-cart/<%= item._id %>" method="POST">
+            <button type="submit" class="cart__trashcan">
               <i class="fas fa-sharp fa-regular fa-trash-can"></i>
             </button>
           </form>
         </li>
+        <% }) %> <% } %>
       </ul>
       <button href="/cart" class="cart-dropdown__button">GO TO CART</button>
     </div>
