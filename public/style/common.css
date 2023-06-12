@@ -220,6 +220,11 @@ p[class*="__text"] {
 .cart-dropdown__product-name {
   color: var(--color-neutral-hsl);
   width: 30ch;
+  display: flex;
+}
+.cart-dropdown__product-price {
+  width: 10ch;
+  display: flex;
 }
 .cart__trashcan {
   color: var(--color-accent-hsl);

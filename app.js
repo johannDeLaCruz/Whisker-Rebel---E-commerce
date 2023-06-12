@@ -13,19 +13,49 @@ app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 app.use(express.static(__dirname + "/node_modules"));
 
-// Define middleware for CART dropdown menu in header
+// Define middleware for USER and CART ITEMS
 const addToCartMiddleware = async (req, res, next) => {
   try {
     const user = await User.findOne({ username: "default" });
     res.locals.cartItems = user.cart;
     res.locals.layout = false;
+
     next();
   } catch (error) {
     next(error);
   }
 };
+// Define middleware for cart costs calculation
+const calculateProductTotalMiddleware = async (req, res, next) => {
+  try {
+    const user = await User.findOne({ username: "default" });
+    const cartItems = user.cart;
+
+    let productTotal = 0;
+    cartItems.forEach((item) => {
+      productTotal += item.price;
+    });
+
+    const shippingCost = 5 * cartItems.length;
+    const discount = cartItems.length > 4 ? 0.25 * productTotal : 0;
+    const taxes = parseFloat(0.05 * productTotal);
+    const estimatedTotal = productTotal + shippingCost - discount + taxes;
+
+    res.locals.productTotal = productTotal.toFixed(2);
+    res.locals.shippingCost = shippingCost.toFixed(2);
+    res.locals.discount = discount.toFixed(2);
+    res.locals.taxes = taxes.toFixed(2);
+    res.locals.estimatedTotal = estimatedTotal.toFixed(2);
+
+    next();
+  } catch (error) {
+    next(error);
+  }
+};
+
 // Use the middleware for CART dropdown menu in header for all routes
 app.use(addToCartMiddleware);
+app.use(calculateProductTotalMiddleware);
 
 // Set pages routing
 app.get("/", (req, res) => {
@@ -108,7 +138,6 @@ app.get("/product/:productId", (req, res) => {
 // CART page routing
 app.get("/cart", async (req, res) => {
   try {
-    
     res.render("cart");
   } catch (err) {
     console.error("Error fetching user cart:", err);

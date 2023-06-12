@@ -43,10 +43,10 @@
     <link rel="stylesheet" href="style\cart.css" />
 
     <!-- SCRIPTS -->
-    <!-- <script
+    <script
       src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js"
       defer
-    ></script> -->
+    ></script>
     <script src="\app\main.js" defer></script>
   </head>
   <body>
@@ -59,20 +59,21 @@
     <section class="cart wrapper default-grid">
       <div class="cart__products-section">
         <% if (cartItems.length === 0) { %>
-        <h2>Your cart is empty!</h2>
+        <h2 class="cart__no-products">Oh no! Your cart is empty!</h2>
         <% } else { %> <% cartItems.forEach(item => { %>
 
         <div class="cart__product">
           <img
-            src="<%= item.coverImage %>"
             alt="<%= item.name %>"
-            class="cart__product-photo"
+            class="cart__product-photo lazy"
+            data-src="<%= item.coverImage %>"
+            src="\assets\img\placeholder\placeholder1.png"
           />
           <span>x1</span>
           <div class="cart__product-name">
-            <h2 ><%= item.name%></h2>
+            <a href="/product/<%= item._id %>"><h2><%= item.name%></h2></a>
           </div>
-          <span class="cart__product-price">$<%= item.price %></span>
+          <div class="cart__product-price"><span>$<%= item.price %></span></div>
           <form action="/remove-from-cart/<%= item._id %>" method="POST">
             <button type="submit" class="cart__trashcan">
               <i class="fas fa-sharp fa-regular fa-trash-can"></i>
@@ -80,16 +81,20 @@
           </form>
         </div>
         <% }) %> <% } %>
+        <div class="cart__product-total">
+          <h3>PRODUCT TOTAL:</h3>
+          <span>$<%= productTotal %></span>
+        </div>
       </div>
       <div class="cart__cost-section">
         <ul class="cart__costs-list">
-          <li>Shipping Cost<span>$0</span></li>
-          <li>Discount<span>$0</span></li>
-          <li>Taxes<span>$0</span></li>
+          <li>Shipping Cost<span>$<%= shippingCost %></span></li>
+          <li>Discount<span>$<%= discount %></span></li>
+          <li>Taxes<span>$<%= taxes %></span></li>
         </ul>
         <div class="cart__estimated-total">
           <h3>ESTIMATED TOTAL:</h3>
-          <span>$0</span>
+          <span>$<%= estimatedTotal %></span>
         </div>
         <button class="cart__checkout-button black-button">CHECKOUT</button>
       </div>

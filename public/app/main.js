@@ -33,22 +33,4 @@ var lazyLoadInstance = new LazyLoad({
   // Your custom settings go here
 });
 
-// SORT BY Dropdown Menu
 
-// function resizeSelect() {
-//   const selectElement = document.querySelector(".subheader__sort-menu");
-//   const selectedOption = selectElement.options[selectElement.selectedIndex];
-//   const selectedOptionText = selectedOption.text;
-
-//   const dummyElement = document.createElement("span");
-//   dummyElement.style.display = "none";
-//   dummyElement.style.fontFamily = window.getComputedStyle(selectElement).getPropertyValue("font-family");
-//   dummyElement.style.fontSize = window.getComputedStyle(selectElement).getPropertyValue("font-size");
-//   dummyElement.textContent = selectedOptionText;
-
-//   document.body.appendChild(dummyElement);
-//   const optionWidth = dummyElement.offsetWidth;
-//   document.body.removeChild(dummyElement);
-
-//   selectElement.style.width = optionWidth + "rem";
-// }

@@ -48,9 +48,9 @@
         <li class="cart__product">
           <span>x1</span>
           <div class="cart-dropdown__product-name">
-            <h2><%= item.name%></h2>
+            <a href="/product/<%= item._id %>"><h2><%= item.name%></h2></a>
           </div>
-          <span class="cart__product-price">$<%= item.price %></span>
+          <div class="cart-dropdown__product-price"><span>$<%= item.price %></span></div>
           <form action="/remove-from-cart/<%= item._id %>" method="POST">
             <button type="submit" class="cart__trashcan">
               <i class="fas fa-sharp fa-regular fa-trash-can"></i>
@@ -59,7 +59,12 @@
         </li>
         <% }) %> <% } %>
       </ul>
-      <button href="/cart" class="cart-dropdown__button">GO TO CART</button>
+      <button
+        onclick="window.location.href='/cart'"
+        class="cart-dropdown__button"
+      >
+        GO TO CART
+      </button>
     </div>
   </nav>
 </header>

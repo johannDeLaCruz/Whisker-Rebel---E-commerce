@@ -71,7 +71,17 @@
           </div>
           <div class="product-details__buttons">
             <button class="product-details__button-buy">BUY NOW</button>
-            <button class="product-details__button-cart">ADD TO CART</button>
+
+            <form action="/add-to-cart/<%= product._id %>" method="post">
+              <input
+                type="hidden"
+                name="productId"
+                value="<%= product._id %>"
+              />
+              <button type="submit" class="product-details__button-cart">
+                ADD TO CART
+              </button>
+            </form>
           </div>
           <div thumbsSlider="" class="swiper mySwiper">
             <div class="swiper-wrapper">
