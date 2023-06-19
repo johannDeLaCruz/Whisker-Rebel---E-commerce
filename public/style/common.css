@@ -189,6 +189,10 @@ p[class*="__text"] {
 .cart-dropdown__product-name {
   width: 30ch;
   cursor: pointer;
+  transition: color 0.3s ease;
+  display: flex;
+  justify-content: start;
+  overflow: hidden;
 }
 .cart-dropdown__product-name:hover {
   color: var(--color-neutral-50a);
@@ -216,11 +220,6 @@ p[class*="__text"] {
   row-gap: 2.4rem;
   justify-content: space-between;
   align-items: center;
-}
-.cart-dropdown__product-name {
-  color: var(--color-neutral-hsl);
-  width: 30ch;
-  display: flex;
 }
 .cart-dropdown__product-price {
   width: 10ch;
