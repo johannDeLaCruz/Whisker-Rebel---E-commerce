@@ -3,6 +3,7 @@ const express = require("express");
 const ejs = require("ejs");
 const Product = require("./productModel.js");
 const User = require("./userModel.js");
+const sendEmail = require("./email.js");
 const port = 3000;
 const app = express();
 
@@ -12,6 +13,10 @@ app.set("view engine", "ejs");
 // Serve static files
 app.use(express.static(__dirname + "/public"));
 app.use(express.static(__dirname + "/node_modules"));
+
+// Set bodyparser middleware
+app.use(express.urlencoded({ extended: true }));
+
 
 // Define middleware for USER and CART ITEMS
 const addToCartMiddleware = async (req, res, next) => {
@@ -185,6 +190,13 @@ app.post("/remove-from-cart/:productId", async (req, res) => {
     console.error("Error removing from cart:", err);
     res.status(500).send("Internal Server Error");
   }
+});
+
+// Contact Form page email sending logic
+app.post("/send-email", async (req, res) => {
+  const {firstName, lastName, email, message} = req.body;
+  sendEmail(firstName, lastName, email, message);
+  res.send('Email sent sucessfully!');
 });
 
 // SERVER LISTENING SETUP
