@@ -1,3 +1,10 @@
+<head>
+  <style>
+    .navbar__cart::after {
+      content: "<%= cartItems.length %>";
+    }
+  </style>
+</head>
 <header class="fluid-wrapper">
   <nav class="navbar wrapper">
     <a href="/">
@@ -50,7 +57,9 @@
           <div class="cart-dropdown__product-name">
             <a href="/product/<%= item._id %>"><h2><%= item.name%></h2></a>
           </div>
-          <div class="cart-dropdown__product-price"><span>$<%= item.price %></span></div>
+          <div class="cart-dropdown__product-price">
+            <span>$<%= item.price %></span>
+          </div>
           <form action="/remove-from-cart/<%= item._id %>" method="POST">
             <button type="submit" class="cart__trashcan">
               <i class="fas fa-sharp fa-regular fa-trash-can"></i>
